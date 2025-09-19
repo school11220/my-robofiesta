@@ -13,8 +13,7 @@ export default function Hero() {
               <span className="text-[var(--neon)]">Beyond Boundaries</span>
             </h1>
             <p className="mt-4 text-white/80 text-lg md:text-xl">
-              RoboFiesta 2025 — A Tech event celebrating AI, Robotics, and
-              Tech.
+              RoboFiesta 2025 — A Tech event celebrating AI, Robotics, and Tech.
             </p>
             <p className="mt-2 text-white/70">
               Oct 13, 2025 | Bengaluru, India
@@ -32,7 +31,9 @@ export default function Hero() {
               <div className="font-orbitron text-3xl md:text-5xl font-extrabold mt-2 neon-subtitle">
                 Hack-A-Day
               </div>
-
+              <p className="mt-4 text-white/80 text-lg md:text-xl">
+                Hackathon
+              </p>
               <div className="mt-6 grid grid-cols-3 gap-3">
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Location</div>
