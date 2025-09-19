@@ -11,9 +11,9 @@ export default function Home() {
     <div className="min-h-screen text-white">
       <Navbar />
       <Hero />
-     
-      <Events />
       <About/>
+      <Schedule />
+      {/* <Events /> */}
       <Contact />
       <Footer />
     </div>

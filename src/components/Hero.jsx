@@ -17,14 +17,18 @@ export default function Hero() {
               Space-Tech.
             </p>
             <p className="mt-2 text-white/70">
-              Dec 12–14, 2025 | Bengaluru, India
+              Oct 13, 2025 | Bengaluru, India
+            </p>
+
+            <p className="mt-4 text-white/80 text-lg md:text-xl">
+              Our Pre Events Start in
             </p>
 
             <Countdown targetDate={EVENT_DATE_ISO} />
           </div>
           <div className="flex-1 w-full">
             <div className="glass p-6 md:p-10 text-center">
-              <div className="text-white/70 text-sm">Event</div>
+              {/* <div className="text-white/70 text-sm">Event</div> */}
               <div className="font-orbitron text-3xl md:text-5xl font-extrabold mt-2 neon-subtitle">
                 Hack-A-Day
               </div>
@@ -32,15 +36,15 @@ export default function Hero() {
               <div className="mt-6 grid grid-cols-3 gap-3">
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Location</div>
-                  <div className="font-semibold">Bengaluru</div>
+                  <div className="font-semibold">RVITM</div>
                 </div>
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Dates</div>
-                  <div className="font-semibold">Dec 12–14</div>
+                  <div className="font-semibold">Oct 13</div>
                 </div>
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Theme</div>
-                  <div className="font-semibold">Space-Tech</div>
+                  <div className="font-semibold">Open Innovation</div>
                 </div>
               </div>
               <div className="mt-8">

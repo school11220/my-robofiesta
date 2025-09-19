@@ -4,8 +4,8 @@ export const events = [
       eventName: "HACK-A-DAY",
       date: "13 October 2025",
       venue: "Bengaluru",
-      image: "",
-      checkoutLink: "",
+      image: "../../public/img/hackaday.png",
+      checkoutLink: "https://editor.wix.com/html/editor/web/renderer/edit/fe333bdb-a464-48eb-a80f-d2e7eb180456?metaSiteId=a9cfc1a4-9c5f-4ead-a132-508d7ec818b5",
     },
     {
       eventName: "BGMI",
@@ -30,7 +30,7 @@ export const events = [
     },
     {
       eventName: "Save The Egg",
-      date: "29 September 2025",
+      date: "4 November 2025",
       venue: "Drawing Room",
       image: "../../public/img/save-the-egg.png",
       checkoutLink: "",
@@ -138,13 +138,6 @@ export const events = [
       date: "13 October 2025",
       venue: "Student Interaction Area",
       image: "../../public/img/squidgames.png",
-      checkoutLink: "",
-    },
-    {
-      eventName: "Logo Design",
-      date: "29 September 2025",
-      venue: "Bengaluru",
-      image: "",
       checkoutLink: "",
     },
     {

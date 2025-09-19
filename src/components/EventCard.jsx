@@ -63,7 +63,7 @@ export default function EventCard({ event }) {
               href={event.checkoutLink}
               target="_blank"
               rel="noreferrer"
-              className="glow-btn text-xs px-3 py-2 mt-1"
+              className="glow-btn text-xs px-3 py-2 inline-block"
             >
               Register
             </a>
