@@ -16,7 +16,7 @@ export default function Contact() {
                 Twitter/X: <a className="text-[var(--neon)]" href="https://x.com/robofiesta" target="_blank" rel="noreferrer">@robofiesta</a>
               </p>
               <p className="mt-2">
-                Instagram: <a className="text-[var(--neon)]" href="https://instagram.com/robofiesta" target="_blank" rel="noreferrer">@robofiesta</a>
+                Instagram: <a className="text-[var(--neon)]" href="https://instagram.com/robofiesta.rvitm" target="_blank" rel="noreferrer">@robofiesta</a>
               </p>
             </div>
           </GlassCard>

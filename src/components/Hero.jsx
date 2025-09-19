@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="section pt-40 md:pt-44">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
             <h1 className="font-orbitron text-4xl md:text-6xl font-extrabold leading-tight neon-title">
               Technoverse:
@@ -14,7 +14,7 @@ export default function Hero() {
             </h1>
             <p className="mt-4 text-white/80 text-lg md:text-xl">
               RoboFiesta 2025 — A cosmic hackathon celebrating AI, Robotics, and
-              Space-Tech.
+              Tech.
             </p>
             <p className="mt-2 text-white/70">
               Oct 13, 2025 | Bengaluru, India

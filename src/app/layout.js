@@ -1,6 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import { Orbitron } from "next/font/google";
 import "./globals.css";
+import ClientLayout from "@/components/ClientLayout";
+import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,18 +15,15 @@ const geistMono = Geist_Mono({
 const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
 });
 
 export const metadata = {
-  title: "RoboFiesta 2025 — Technoverse: Beyond Boundaries",
-  description:
-    "RoboFiesta 2025 is a futuristic, space-themed hackathon in Bengaluru, India. Join Dec 12–14 for AI, Robotics, and Space-tech challenges!",
-  metadataBase: new URL("https://example.com"),
+  title: "RoboFiesta 2025 - Technoverse: Beyond Boundaries",
+  description: "Experience the ultimate tech hackathon where innovation meets the cosmos. Join us for RoboFiesta 2025 and push the boundaries of technology in our cosmic arena.",
+  keywords: "hackathon, robotics, AI, technology, innovation, coding, programming, competition",
   openGraph: {
-    title: "RoboFiesta 2025 — Technoverse: Beyond Boundaries",
-    description:
-      "A futuristic, space-themed hackathon in Bengaluru. Dec 12–14, 2025.",
+    title: "RoboFiesta 2025 - Technoverse: Beyond Boundaries",
+    description: "Experience the ultimate tech hackathon where innovation meets the cosmos.",
     type: "website",
   },
 };
@@ -35,13 +32,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased relative min-h-screen`}
       >
-        {/* Starfield background */}
-        <div className="stars" aria-hidden="true" />
-        <div className="twinkling" aria-hidden="true" />
-        <div className="clouds" aria-hidden="true" />
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

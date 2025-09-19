@@ -3,11 +3,8 @@ import GlassCard from "@/components/GlassCard";
 import { events } from "@/data/events";
 
 export default function Schedule() {
-  // Flatten the events array and group by date
-  const allEvents = events.flat();
-  
   // Group events by date
-  const eventsByDate = allEvents.reduce((acc, event) => {
+  const eventsByDate = events.reduce((acc, event) => {
     const date = event.date;
     if (!acc[date]) {
       acc[date] = [];
@@ -16,9 +13,19 @@ export default function Schedule() {
     return acc;
   }, {});
 
-  // Sort dates chronologically
+  // Sort dates chronologically and events within each date by time
   const sortedDates = Object.keys(eventsByDate).sort((a, b) => {
     return new Date(a) - new Date(b);
+  });
+
+  // Sort events within each date by start time
+  Object.keys(eventsByDate).forEach(date => {
+    eventsByDate[date].sort((a, b) => {
+      if (!a.time || !b.time) return 0;
+      const timeA = a.time.split(' ')[0]; // Get start time
+      const timeB = b.time.split(' ')[0]; // Get start time
+      return timeA.localeCompare(timeB);
+    });
   });
 
   return (
@@ -36,10 +43,30 @@ export default function Schedule() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {eventsByDate[date].map((event, index) => (
                   <GlassCard key={`${event.eventName}-${index}`} className="p-4">
-                    <div className="flex flex-col">
-                      <h4 className="font-orbitron text-lg font-semibold text-white mb-2">
+                    <div className="flex flex-col space-y-2">
+                      <h4 className="font-orbitron text-lg font-semibold text-white">
                         {event.eventName}
                       </h4>
+                      
+                      {event.time && (
+                        <div className="flex items-center gap-2 text-[var(--neon)] text-sm font-medium">
+                          <svg 
+                            className="w-4 h-4" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round" 
+                              strokeWidth={2} 
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
+                            />
+                          </svg>
+                          <span>{event.time}</span>
+                        </div>
+                      )}
+                      
                       {event.venue && (
                         <div className="flex items-center gap-2 text-white/70 text-sm">
                           <svg 

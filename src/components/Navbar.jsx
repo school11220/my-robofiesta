@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         {/* Desktop View: A single bar, hidden on mobile */}
         <div className="hidden md:flex mt-4 glass items-center justify-between px-4 py-3">
-          <a href="#home" className="flex items-center gap-2">
+          <a href="/#" className="flex items-center gap-2">
             <Image
               src="/img/logo.png"
               alt="RoboFiesta 2025 Logo"
@@ -28,9 +28,10 @@ export default function Navbar() {
             />
           </a>
           <nav className="flex items-center gap-3">
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/#">Home</NavLink>
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/events">Events</NavLink>
+            <NavLink href="/#schedule">Schedule</NavLink>
             <NavLink href="/#contact">Contact</NavLink>
           </nav>
         </div>
@@ -39,7 +40,7 @@ export default function Navbar() {
         <div className="md:hidden mt-4 space-y-2">
           {/* Logo bar */}
           <div className="glass flex justify-center px-4 py-3">
-            <a href="#home" className="flex items-center gap-2">
+            <a href="/#home" className="flex items-center gap-2">
               <Image
                 src="/img/logo.png"
                 alt="RoboFiesta 2025 Logo"
@@ -53,10 +54,11 @@ export default function Navbar() {
           {/* Nav links bar */}
           <div className="glass flex justify-center px-4 py-2">
             <nav className="flex items-center gap-3">
-              <NavLink href="#home">Home</NavLink>
-              <NavLink href="#about">About</NavLink>
-              <NavLink href="#events">Events</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+              <NavLink href="/#home">Home</NavLink>
+              {/* <NavLink href="/#about">About</NavLink> */}
+              <NavLink href="/#Schedule">Schedule</NavLink>
+              <NavLink href="/events">Events</NavLink>
+              <NavLink href="/#contact">Contact</NavLink>
             </nav>
           </div>
         </div>

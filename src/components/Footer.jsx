@@ -1,4 +1,4 @@
-import { GitHubIcon, TwitterIcon, LinkedInIcon } from "./SocialIcons";
+import { GitHubIcon, TwitterIcon, YouTubeIcon, InstagramIcon } from "./SocialIcons";
 
 export default function Footer() {
   return (
@@ -13,9 +13,8 @@ export default function Footer() {
               
             </div>
             <div className="flex items-center gap-6">
-              <TwitterIcon />
-              <GitHubIcon />
-              <LinkedInIcon />
+              <YouTubeIcon />
+              <InstagramIcon />
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/60 text-sm">

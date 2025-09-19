@@ -52,9 +52,18 @@ export default function EventCard({ event }) {
           </h3>
         <div>
           <div className="text-xs text-white/60 mt-1">
-            {event.date} {event.venue && `• ${event.venue}`}
+            {event.date}
           </div>
-          
+          {event.time && (
+            <div className="text-xs text-[var(--neon)] mt-1">
+              {event.time}
+            </div>
+          )}
+          {event.venue && (
+            <div className="text-xs text-white/60 mt-1">
+             {event.venue}
+            </div>
+          )}
         </div>
         
         <div className="mt-4">
