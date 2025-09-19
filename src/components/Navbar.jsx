@@ -56,7 +56,7 @@ export default function Navbar() {
             <nav className="flex items-center gap-3">
               <NavLink href="/#home">Home</NavLink>
               {/* <NavLink href="/#about">About</NavLink> */}
-              <NavLink href="#Schedule">Schedule</NavLink>
+              <NavLink href="/#schedule">Schedule</NavLink>
               <NavLink href="/events">Events</NavLink>
               <NavLink href="/#contact">Contact</NavLink>
             </nav>
