@@ -35,9 +35,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Main content fade-in animation */
+/* Main content - instant display for navigation */
 .main-content {
   background: transparent;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* First visit fade-in animation only */
+.first-visit-fade {
   animation: fadeInContent 1s ease-in-out 1.5s both;
 }
 
