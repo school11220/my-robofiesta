@@ -28,7 +28,7 @@ export default function ClientLayout({ children }) {
     // After loading completes, show main content
     setTimeout(() => {
       setCurrentScreen("main");
-    }, 1500);
+    }, 5000);
   };
 
   // For first visit, show welcome screen
