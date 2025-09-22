@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Galaxy from "./Galaxy";
 
 export default function WelcomeScreen({ onEnter }) {
   const [isPressed, setIsPressed] = useState(false);
@@ -15,10 +16,21 @@ export default function WelcomeScreen({ onEnter }) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
-      {/* Animated starfield background */}
+      {/* Galaxy WebGL Background */}
       <div className="absolute inset-0">
-        <div className="welcome-stars"></div>
-        <div className="welcome-twinkling"></div>
+        <Galaxy 
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          density={3.0}
+          glowIntensity={0.7}
+          saturation={1.0}
+          hueShift={140}
+          twinkleIntensity={0.5}
+          rotationSpeed={0.015}
+          speed={0.4}
+          transparent={false}
+          repulsionStrength={2.0}
+        />
       </div>
 
       {/* Welcome content */}

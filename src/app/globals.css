@@ -725,3 +725,48 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* StarBorder animations */
+@keyframes star-movement-bottom {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+
+@keyframes star-movement-top {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+
+/* StarBorder utility classes */
+.animate-star-movement-bottom {
+  animation: star-movement-bottom linear infinite alternate;
+}
+
+.animate-star-movement-top {
+  animation: star-movement-top linear infinite alternate;
+}
+
+/* Rocket launch animation */
+.rocket-launch {
+  animation: rocketLaunch 5s ease-out forwards;
+}
+
+@keyframes rocketLaunch {
+  0% {
+    transform: translate(-50%, 100vh) scale(0.2);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, 50vh) scale(1);
+  }
+  80% {
+    transform: translate(-50%, 20vh) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -20vh) scale(2);
+    opacity: 0;
+  }
+}

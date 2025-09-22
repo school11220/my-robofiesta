@@ -44,12 +44,12 @@ export default function Schedule() {
                 {eventsByDate[date].map((event, index) => (
                   <GlassCard key={`${event.eventName}-${index}`} className="p-4">
                     <div className="flex flex-col space-y-2">
-                      <h4 className="font-orbitron text-lg font-semibold text-white">
+                      <h4 className="font-orbitron text-lg font-semibold text-white text-center">
                         {event.eventName}
                       </h4>
                       
                       {event.time && (
-                        <div className="flex items-center gap-2 text-[var(--neon)] text-sm font-medium">
+                        <div className="flex items-center justify-center gap-2 text-[var(--neon)] text-sm font-medium">
                           <svg 
                             className="w-4 h-4" 
                             fill="none" 
@@ -67,7 +67,7 @@ export default function Schedule() {
                         </div>
                       )}
                       
-                      {event.venue && (
+                      {/* {event.venue && (
                         <div className="flex items-center gap-2 text-white/70 text-sm">
                           <svg 
                             className="w-4 h-4 text-[var(--neon)]" 
@@ -90,7 +90,7 @@ export default function Schedule() {
                           </svg>
                           <span>{event.venue}</span>
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </GlassCard>
                 ))}

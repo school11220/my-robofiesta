@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Galaxy from "./Galaxy";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,15 +42,33 @@ export default function LoadingScreen() {
 
   return (
     <div className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
-      {/* Enhanced starfield background */}
+      {/* Galaxy WebGL Background */}
       <div className="absolute inset-0">
-        <div className="loading-stars"></div>
-        <div className="loading-twinkling"></div>
-        <div className="loading-cosmic-waves"></div>
+        <Galaxy 
+          mouseRepulsion={false}
+          mouseInteraction={false}
+          density={4.0}
+          glowIntensity={0.5}
+          saturation={1.0}
+          hueShift={200}
+          twinkleIntensity={0.6}
+          rotationSpeed={0.02}
+          speed={0.8}
+          transparent={false}
+        />
       </div>
 
       {/* Scanning lines effect */}
       <div className="scanning-lines"></div>
+
+      {/* Rocket Animation */}
+      <div className="fixed bottom-0 left-0 w-full h-full pointer-events-none z-20">
+        <div className="relative w-full h-full">
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 rocket-launch">
+            <div className="text-6xl animate-pulse">🚀</div>
+          </div>
+        </div>
+      </div>
 
       {/* Loading content */}
       <div className="relative z-10 text-center">

@@ -5,15 +5,15 @@ export default function Footer() {
     <footer className="mt-20 md:mt-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="glass p-8 rounded-t-2xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-center md:text-left">
-              <h3 className="font-orbitron text-2xl font-bold text-white">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div className="text-center md:text-left align-middle justify-center">
+              <h3 className="font-orbitron text-2xl font-bold text-white text-center">
                 RoboFiesta 2025
               </h3>
               
             </div>
             <div className="flex items-center gap-6">
-              <YouTubeIcon />
+              {/* <YouTubeIcon /> */}
               <InstagramIcon />
             </div>
           </div>

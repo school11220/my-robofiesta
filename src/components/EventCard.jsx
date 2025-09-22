@@ -1,5 +1,7 @@
 import Image from "next/image";
 import GlassCard from "@/components/GlassCard";
+import StarBorder from "@/components/StarBorder";
+import Link from "next/link";
 
 function getImagePath(eventName, imagePath) {
   // If image path is provided and not empty, use it
@@ -33,9 +35,10 @@ export default function EventCard({ event }) {
   const imagePath = getImagePath(event.eventName, event.image);
   
   return (
-    <GlassCard className="overflow-hidden flex flex-col">
+    <Link href="/events/abc" className="block">
+      <GlassCard className="overflow-hidden flex flex-col group hover:scale-105 transition-transform duration-300 relative cursor-pointer">
       {/* Event Image */}
-      <div className="relative w-full aspect-video bg-white/5">
+      <div className="relative w-full aspect-video bg-white/5" >
         <Image
           src={imagePath}
           alt={event.eventName}
@@ -43,6 +46,15 @@ export default function EventCard({ event }) {
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+        
+        {/* Description overlay on hover */}
+        {event.description && (
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <p className="text-white text-sm text-center leading-relaxed">
+              {event.description}
+            </p>
+          </div>
+        )}
       </div>
       
       {/* Event Details */}
@@ -59,26 +71,28 @@ export default function EventCard({ event }) {
               {event.time}
             </div>
           )}
-          {event.venue && (
+          {/* {event.venue && (
             <div className="text-xs text-white/60 mt-1">
              {event.venue}
             </div>
-          )}
+          )} */}
         </div>
         
         <div className="mt-4">
-          
-            <a
-              href={event.checkoutLink}
-              target="_blank"
-              rel="noreferrer"
-              className="glow-btn text-xs px-3 py-2 inline-block"
-            >
-              Register
-            </a>
-          
+          <StarBorder
+            as="a"
+            href={event.checkoutLink}
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs"
+            color="cyan"
+            speed="2.5s"
+          >
+            Register
+          </StarBorder>
         </div>
       </div>
     </GlassCard>
+    </Link>
   );
 }

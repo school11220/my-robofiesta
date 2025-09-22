@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
 import EventCard from "@/components/EventCard";
+import Galaxy from "@/components/Galaxy";
 import { events } from "@/data/events";
 
 export default function EventsPage() {
@@ -9,10 +10,29 @@ export default function EventsPage() {
   const allEvents = events.flat();
 
   return (
-    <div className="min-h-screen text-white">
-      <Navbar />
-      <main className="pt-28 md:pt-32">
-        <section id="all-events" className="section py-10 md:py-16">
+    <div className="min-h-screen text-white relative">
+      {/* Galaxy WebGL Background */}
+      <div className="fixed inset-0 w-full h-full">
+        <Galaxy 
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          density={3.5}
+          glowIntensity={0.6}
+          saturation={1.0}
+          hueShift={180}
+          twinkleIntensity={0.4}
+          rotationSpeed={0.01}
+          speed={0.5}
+          transparent={false}
+          repulsionStrength={1.5}
+        />
+      </div>
+      
+      {/* Main content */}
+      <div className="relative z-10">
+        <Navbar />
+        <main className="pt-6 md:pt-8">
+        <section id="all-events" className="section py-4 md:py-6">
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <SectionHeading className="mb-8 text-center">
               All Events
@@ -31,8 +51,9 @@ export default function EventsPage() {
             )}
           </div>
         </section>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

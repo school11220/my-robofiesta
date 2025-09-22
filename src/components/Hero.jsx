@@ -1,17 +1,24 @@
 import Countdown from "@/components/Countdown";
+import StarBorder from "@/components/StarBorder";
 import { EVENT_DATE_ISO, REG_LINK } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="section pt-40 md:pt-44">
+    <section id="home" className="section pt-24 md:pt-32 pb-16 md:pb-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="flex-1">
-            <h1 className="font-orbitron text-4xl md:text-6xl font-extrabold leading-tight neon-title">
-              Technoverse:
-              <br />
-              <span className="text-[var(--neon)]">Beyond Boundaries</span>
-            </h1>
+            <div className="flex justify-start">
+              <Image
+                src="/img/logo.png"
+                alt="RoboFiesta 2025 Logo"
+                width={500}
+                height={56}
+                className="h-auto w-full max-w-md md:max-w-none"
+                priority
+              />
+            </div>
             <p className="mt-4 text-white/80 text-lg md:text-xl">
               RoboFiesta 2025 — A Tech event celebrating AI, Robotics, and Tech.
             </p>
@@ -27,13 +34,11 @@ export default function Hero() {
           </div>
           <div className="flex-1 w-full">
             <div className="glass p-6 md:p-10 text-center">
-              {/* <div className="text-white/70 text-sm">Event</div> */}
+              <p className="mt-4 text-white/80 text-lg md:text-xl">Featured Hackathon</p>
               <div className="font-orbitron text-3xl md:text-5xl font-extrabold mt-2 neon-subtitle">
                 Hack-A-Day
               </div>
-              <p className="mt-4 text-white/80 text-lg md:text-xl">
-                Hackathon
-              </p>
+              {/* <p className="mt-4 text-white/80 text-lg md:text-xl">Hackathon</p> */}
               <div className="mt-6 grid grid-cols-3 gap-3">
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Location</div>
@@ -44,19 +49,23 @@ export default function Hero() {
                   <div className="font-semibold">Oct 13</div>
                 </div>
                 <div className="glass py-3">
-                  <div className="text-xs text-white/60">Theme</div>
-                  <div className="font-semibold">Open Innovation</div>
+                  <div className="text-xs text-white/60">Prize Pool</div>
+                  <div className="font-semibold">₹30,000</div>
                 </div>
+                
               </div>
               <div className="mt-8">
-                <a
+                <StarBorder
+                  as="a"
                   href={REG_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="glow-btn text-lg p-20"
+                  className="text-lg font-bold "
+                  color="cyan"
+                  speed="1.5s"
                 >
-                  Register Now
-                </a>
+                  REGISTER NOW
+                </StarBorder>
               </div>
             </div>
           </div>
