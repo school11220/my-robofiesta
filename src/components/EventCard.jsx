@@ -2,6 +2,7 @@ import Image from "next/image";
 import GlassCard from "@/components/GlassCard";
 import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
+import events from "../data/events"
 
 function getImagePath(eventName, imagePath) {
   // If image path is provided and not empty, use it
@@ -35,7 +36,7 @@ export default function EventCard({ event }) {
   const imagePath = getImagePath(event.eventName, event.image);
   
   return (
-    <Link href="/events/abc" className="block">
+    <Link href = {event.checkoutLink} className="block">
       <GlassCard className="overflow-hidden flex flex-col group hover:scale-105 transition-transform duration-300 relative cursor-pointer">
       {/* Event Image */}
       <div className="relative w-full aspect-video bg-white/5" >

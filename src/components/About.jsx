@@ -7,34 +7,29 @@ export default function About() {
         <SectionHeading>About Us</SectionHeading>
         <div className="mt-4 space-y-4">
           <p className="text-white/80 leading-relaxed font-medium text-justify text-md">
-            The upcoming edition of Robofiesta promises to be bigger and more
-            exciting than ever, with a diverse lineup of technical and auxiliary
-            events designed to challenge, inspire, and entertain participants. On
-            the technical side, highlights include the Hardware Project Expo, Robo
-            Race, Circuit Design, Code Battle, Build Your Web, and Bug Squash,
-            which will test creativity, technical knowledge, and programming
-            expertise.
+            Robofiesta 2025 returns with more energy, innovation, and excitement
+            than ever before! Building on the legacy of its past success, this
+            national-level fest brings together the brightest minds and most
+            passionate creators from across the country. With its unique mix of
+            technical challenges, creative competitions, and hands-on
+            experiences, the fest is designed to inspire innovation, test
+            skills, and spark collaboration. It’s not just a competition—it’s a
+            platform where ideas meet opportunity and imagination turns into
+            reality.
           </p>
-          
+
           <p className="text-white/80 leading-relaxed font-medium text-justify text-md">
-            Events such as the Great Tech Quest, Capture the Flag, and
-            Save the Egg add a fun and competitive edge, while entrepreneurial and
-            communication-focused contests like Pitch in the Box and Sell Me This
-            Pen provide opportunities for students to showcase their innovative
-            thinking and persuasive skills. This year also brings exciting new
-            additions in the auxiliary category, including Logo Design, Treasure
-            Hunt, Anime Quiz, and Squid Games, alongside the crowd-favorite IPL
-            Auction.
+            But Robofiesta is more than just technology—it’s an unforgettable
+            celebration of creativity, community, and culture. From high-energy
+            tournaments and interactive sessions to thought-provoking talks and
+            engaging activities, the fest offers something for everyone. With
+            endless opportunities to learn, connect, and showcase talent,
+            Robofiesta 2025 promises an electrifying atmosphere where
+            participants grow, compete, and create memories that
+            last a lifetime.
           </p>
+
           
-          <p className="text-white/80 leading-relaxed font-medium text-justify text-md">
-            Gaming enthusiasts can look forward to thrilling E-Games
-            tournaments featuring Valorant, BGMI, Free Fire, and FIFA, ensuring
-            high-energy competition and entertainment throughout the fest. With
-            its blend of innovation, skill-building, and fun, Robofiesta is set to
-            offer participants an unforgettable experience that fosters teamwork,
-            creativity, and community spirit.
-          </p>
         </div>
       </div>
     </section>

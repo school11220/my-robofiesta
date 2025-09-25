@@ -5,6 +5,8 @@ import EventCard from "@/components/EventCard";
 import Galaxy from "@/components/Galaxy";
 import { events } from "@/data/events";
 
+
+
 export default function EventsPage() {
   // Flatten the nested array structure
   const allEvents = events.flat();
@@ -13,19 +15,11 @@ export default function EventsPage() {
     <div className="min-h-screen text-white relative">
       {/* Galaxy WebGL Background */}
       <div className="fixed inset-0 w-full h-full">
-        <Galaxy 
-          mouseRepulsion={true}
-          mouseInteraction={true}
-          density={3.5}
-          glowIntensity={0.6}
-          saturation={1.0}
-          hueShift={180}
-          twinkleIntensity={0.4}
-          rotationSpeed={0.01}
-          speed={0.5}
-          transparent={false}
-          repulsionStrength={1.5}
-        />
+        <div className="absolute inset-0 w-full h-full">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
+      </div>
       </div>
       
       {/* Main content */}

@@ -18,19 +18,11 @@ export default function WelcomeScreen({ onEnter }) {
     <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
       {/* Galaxy WebGL Background */}
       <div className="absolute inset-0">
-        <Galaxy 
-          mouseRepulsion={true}
-          mouseInteraction={true}
-          density={3.0}
-          glowIntensity={0.7}
-          saturation={1.0}
-          hueShift={140}
-          twinkleIntensity={0.5}
-          rotationSpeed={0.015}
-          speed={0.4}
-          transparent={false}
-          repulsionStrength={2.0}
-        />
+        <div className="absolute inset-0 w-full h-full">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
+      </div>
       </div>
 
       {/* Welcome content */}

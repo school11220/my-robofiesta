@@ -5,7 +5,7 @@ export const events =[
     "time": "9:00 am – 5:00 pm",
     "venue": "Bengaluru",
     "image": "../../public/img/hackaday.png",
-    "checkoutLink": "https://editor.wix.com/html/editor/web/renderer/edit/fe333bdb-a464-48eb-a80f-d2e7eb180456?metaSiteId=a9cfc1a4-9c5f-4ead-a132-508d7ec818b5"
+    "checkoutLink": "https://register.robofiesta.in/event-details/hack-a-day"
   },
   {
     "eventName": "BGMI",
@@ -13,7 +13,7 @@ export const events =[
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "../../public/img/bgmi.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/bgmi"
   },
   {
     "eventName": "FIFA",
@@ -21,7 +21,7 @@ export const events =[
     "time": "11:00 am – 1:00 pm",
     "venue": "MCA Sem Hall",
     "image": "../../public/img/bgmi.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/fifa"
   },
   {
     "eventName": "Free Fire",
@@ -29,7 +29,7 @@ export const events =[
     "time": "2:00 pm – 5:00 pm",
     "venue": "MCA Sem Hall",
     "image": "../../public/img/freefire.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/free-fire"
   },
   {
     "eventName": "Save The Egg",
@@ -37,7 +37,7 @@ export const events =[
     "time": "11:00 am – 3:00 pm",
     "venue": "Drawing Room",
     "image": "../../public/img/save-the-egg.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/save-the-egg"
   },
   {
     "eventName": "Valorant",
@@ -45,7 +45,7 @@ export const events =[
     "time": "9:00 am – 5:00 pm",
     "venue": "Lab 3",
     "image": "../../public/img/bgmi.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/valorant"
   },
   {
     "eventName": "Capture the Flag",
@@ -53,7 +53,7 @@ export const events =[
     "time": "11:00 am – 1:00 pm",
     "venue": "Lab 3",
     "image": "../../public/img/ctf.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/capture-the-flag"
   },
   {
     "eventName": "IPL Auction",
@@ -61,7 +61,7 @@ export const events =[
     "time": "10:00 am – 4:00 pm",
     "venue": "Auditorium",
     "image": "../../public/img/ipl.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/ipl-auction"
   },
   {
     "eventName": "Anime Quiz",
@@ -69,7 +69,7 @@ export const events =[
     "time": "9:30 am – 11:30 am",
     "venue": "6TH FLOOR SEM HALL",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/anime-quiz"
   },
   {
     "eventName": "Treasure Hunt",
@@ -77,7 +77,7 @@ export const events =[
     "time": "2:00 pm – 4:00 pm",
     "venue": null,
     "image": "../../public/img/treasurehunt.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/treasure-hunt"
   },
   {
     "eventName": "Sell Me This Pen",
@@ -85,7 +85,7 @@ export const events =[
     "time": "12:00 pm – 2:00 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "../../public/img/sellmethispen.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/sell-me-this-pen"
   },
   {
     "eventName": "Great Tech Quest",
@@ -93,7 +93,7 @@ export const events =[
     "time": "2:00 pm – 4:00 pm",
     "venue": "1ST FLOOR SEM HALL",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/great-tech-quest"
   },
   {
     "eventName": "Pitch In The Box",
@@ -101,7 +101,7 @@ export const events =[
     "time": "2:00 pm – 4:00 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/pitch-in-the-box"
   },
   {
     "eventName": "Bug Squash",
@@ -109,7 +109,7 @@ export const events =[
     "time": "1:00 pm – 3:00 pm",
     "venue": "Lab 3",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/bug-squash"
   },
   {
     "eventName": "Build Your Web",
@@ -117,7 +117,7 @@ export const events =[
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/build-your-web"
   },
   {
     "eventName": "Robo Race",
@@ -125,7 +125,7 @@ export const events =[
     "time": "9:30 am – 12:30 pm",
     "venue": "GROUND FLOOR LOBBY",
     "image": "../../public/img/roborace.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/robo-race"
   },
   {
     "eventName": "CODE BATTLE",
@@ -133,7 +133,7 @@ export const events =[
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 1",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/code-battle"
   },
   {
     "eventName": "Circuitrix",
@@ -141,7 +141,7 @@ export const events =[
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 2",
     "image": "../../public/img/circuitrix.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/circuitrix"
   },
   {
     "eventName": "Hardware Project Expo",
@@ -149,7 +149,7 @@ export const events =[
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/hardware-project-expo"
   },
   {
     "eventName": "Squid Game",
@@ -157,7 +157,7 @@ export const events =[
     "time": "9:00 am – 9:05 am",
     "venue": "Student Interaction Area",
     "image": "../../public/img/squidgames.png",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/squid-game"
   },
   {
     "eventName": "Logo Design",
@@ -165,6 +165,6 @@ export const events =[
     "time": "10:00 am – 11:00 am",
     "venue": "LAB 1",
     "image": "",
-    "checkoutLink": ""
+    "checkoutLink": "https://register.robofiesta.in/event-details/logo-design"
   }
 ]

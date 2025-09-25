@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Galaxy from "./Galaxy";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,40 +41,22 @@ export default function LoadingScreen() {
 
   return (
     <div className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
-      {/* Galaxy WebGL Background */}
+      {/* Enhanced starfield background */}
       <div className="absolute inset-0">
-        <Galaxy 
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={4.0}
-          glowIntensity={0.5}
-          saturation={1.0}
-          hueShift={200}
-          twinkleIntensity={0.6}
-          rotationSpeed={0.02}
-          speed={0.8}
-          transparent={false}
-        />
+        <div className="loading-stars"></div>
+        <div className="loading-twinkling"></div>
+        <div className="loading-cosmic-waves"></div>
       </div>
 
       {/* Scanning lines effect */}
       <div className="scanning-lines"></div>
-
-      {/* Rocket Animation */}
-      <div className="fixed bottom-0 left-0 w-full h-full pointer-events-none z-20">
-        <div className="relative w-full h-full">
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 rocket-launch">
-            <div className="text-6xl animate-pulse">🚀</div>
-          </div>
-        </div>
-      </div>
 
       {/* Loading content */}
       <div className="relative z-10 text-center">
         {/* Logo with enhanced glow */}
         <div className="mb-8">
           <div className="mb-4 flex justify-center relative">
-            <div className="logo-hologram">
+            {/* <div className="logo-hologram"> */}
               <Image
                 src="/img/logo.png"
                 alt="RoboFiesta 2025 Logo"
@@ -84,7 +65,7 @@ export default function LoadingScreen() {
                 className="h-16 md:h-24 w-auto object-contain relative z-10"
                 priority
               />
-            </div>
+            {/* </div> */}
           </div>
           <p className="text-lg md:text-xl text-[var(--neon)] mt-2 font-orbitron typewriter">
             Technoverse: Beyond Boundaries

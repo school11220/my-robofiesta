@@ -57,7 +57,7 @@ export default function Hero() {
               <div className="mt-8">
                 <StarBorder
                   as="a"
-                  href={REG_LINK}
+                  href="https://register.robofiesta.in/event-details/hack-a-day"
                   target="_blank"
                   rel="noreferrer"
                   className="text-lg font-bold "
