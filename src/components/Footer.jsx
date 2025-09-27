@@ -46,8 +46,8 @@ export default function Footer() {
                 Wrapping them in another <a> tag is incorrect. 
                 Just render the components directly.
               */}
-              <TwitterIcon />
-              <GitHubIcon />
+              {/* <TwitterIcon />
+              <GitHubIcon /> */}
               <YouTubeIcon />
               <InstagramIcon />
             </div>
