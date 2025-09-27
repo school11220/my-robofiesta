@@ -4,7 +4,7 @@ export const events =[
     "date": "1 November 2025",
     "time": "9:00 am – 5:00 pm",
     "venue": "Bengaluru",
-    "image": "../../public/img/hackaday.png",
+    "image": "/img/hackaday.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/hack-a-day"
   },
   {
@@ -12,7 +12,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
-    "image": "../../public/img/bgmi.png",
+    "image": "/img/bgmi.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/bgmi"
   },
   {
@@ -20,7 +20,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "11:00 am – 1:00 pm",
     "venue": "MCA Sem Hall",
-    "image": "../../public/img/bgmi.png",
+    "image": "/img/fifa.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/fifa"
   },
   {
@@ -28,7 +28,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "2:00 pm – 5:00 pm",
     "venue": "MCA Sem Hall",
-    "image": "../../public/img/freefire.png",
+    "image": "/img/freefire.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/free-fire"
   },
   {
@@ -36,7 +36,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "11:00 am – 3:00 pm",
     "venue": "Drawing Room",
-    "image": "../../public/img/save-the-egg.png",
+    "image": "/img/save-the-egg.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/save-the-egg"
   },
   {
@@ -44,7 +44,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "9:00 am – 5:00 pm",
     "venue": "Lab 3",
-    "image": "../../public/img/bgmi.png",
+    "image": "/img/valo.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/valorant"
   },
   {
@@ -52,7 +52,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "11:00 am – 1:00 pm",
     "venue": "Lab 3",
-    "image": "../../public/img/ctf.png",
+    "image": "/img/ctf.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/capture-the-flag"
   },
   {
@@ -60,15 +60,15 @@ export const events =[
     "date": "5 November 2025",
     "time": "10:00 am – 4:00 pm",
     "venue": "Auditorium",
-    "image": "../../public/img/ipl.png",
+    "image": "/img/ipl.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/ipl-auction"
   },
   {
     "eventName": "Anime Quiz",
     "date": "5 November 2025",
-    "time": "9:30 am – 11:30 am",
+    "time": "9:30 am - 11:30 am",
     "venue": "6TH FLOOR SEM HALL",
-    "image": "",
+    "image": "/img/animequiz.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/anime-quiz"
   },
   {
@@ -76,7 +76,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": null,
-    "image": "../../public/img/treasurehunt.png",
+    "image": "/img/treasurehunt.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/treasure-hunt"
   },
   {
@@ -84,7 +84,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "12:00 pm – 2:00 pm",
     "venue": "6TH FLOOR SEM HALL",
-    "image": "../../public/img/sellmethispen.png",
+    "image": "/img/sellmethispen.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/sell-me-this-pen"
   },
   {
@@ -92,7 +92,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": "1ST FLOOR SEM HALL",
-    "image": "",
+    "image": "/img/logo.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/great-tech-quest"
   },
   {
@@ -100,7 +100,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": "6TH FLOOR SEM HALL",
-    "image": "",
+    "image": "/img/logo.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/pitch-in-the-box"
   },
   {
@@ -108,7 +108,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "1:00 pm – 3:00 pm",
     "venue": "Lab 3",
-    "image": "",
+    "image": "/img/bugsquash.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/bug-squash"
   },
   {
@@ -116,7 +116,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
-    "image": "",
+    "image": "/img/buildyourweb.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/build-your-web"
   },
   {
@@ -124,7 +124,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "9:30 am – 12:30 pm",
     "venue": "GROUND FLOOR LOBBY",
-    "image": "../../public/img/roborace.png",
+    "image": "/img/roborace.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/robo-race"
   },
   {
@@ -132,7 +132,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 1",
-    "image": "",
+    "image": "/img/codebattle.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/code-battle"
   },
   {
@@ -140,7 +140,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 2",
-    "image": "../../public/img/circuitrix.png",
+    "image": "/img/circuitrix.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/circuitrix"
   },
   {
@@ -148,7 +148,7 @@ export const events =[
     "date": "4 November 2025",
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
-    "image": "",
+    "image": "/img/hardware.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/hardware-project-expo"
   },
   {
@@ -156,7 +156,7 @@ export const events =[
     "date": "13 October 2025",
     "time": "9:00 am – 9:05 am",
     "venue": "Student Interaction Area",
-    "image": "../../public/img/squidgames.png",
+    "image": "/img/squidgames.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/squid-game"
   },
   {
@@ -164,7 +164,7 @@ export const events =[
     "date": "13 October 2025",
     "time": "10:00 am – 11:00 am",
     "venue": "LAB 1",
-    "image": "",
+    "image": "/img/logo.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/logo-design"
   }
 ]
