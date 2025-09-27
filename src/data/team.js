@@ -58,9 +58,9 @@ export const teamMembers = [
 
 export const departments = [
   "All",
-  "Computer Science", 
-  "Electronics",
-  "Information Science",
-  "Mechanical",
-  "Civil"
+  "Computer Science Engineering", 
+  "Electronics and Communication Engineering",
+  "Information Science Engineering",
+  "Mechanical Engineering",
+  "Civil Engineering",
 ];

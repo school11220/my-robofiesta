@@ -3,11 +3,22 @@
 import { useEffect, useMemo, useState } from "react";
 
 export default function Countdown({ targetDate }) {
-  const target = useMemo(() => new Date(targetDate).getTime(), [targetDate]);
-  const [timeLeft, setTimeLeft] = useState(target - Date.now());
+  // Ensure valid target timestamp
+  const target = useMemo(() => {
+    const t = new Date(targetDate).getTime();
+    return isNaN(t) ? Date.now() : t; // fallback to now if invalid
+  }, [targetDate]);
+
+  const [timeLeft, setTimeLeft] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setTimeLeft(target - Date.now()), 1000);
+    // Set initial value after mount (avoids hydration mismatch)
+    setTimeLeft(target - Date.now());
+
+    const id = setInterval(() => {
+      setTimeLeft(target - Date.now());
+    }, 1000);
+
     return () => clearInterval(id);
   }, [target]);
 
@@ -29,11 +40,16 @@ export default function Countdown({ targetDate }) {
   return (
     <div className="mt-6 grid grid-cols-4 gap-3 md:gap-4 w-full max-w-lg">
       {items.map((item) => (
-        <div key={item.label} className="glass text-center py-3 md:py-4">
+        <div
+          key={item.label}
+          className="glass text-center py-3 md:py-4 rounded-2xl"
+        >
           <div className="text-2xl md:text-3xl font-bold text-[var(--neon)] font-orbitron">
             {item.value.toString().padStart(2, "0")}
           </div>
-          <div className="text-xs md:text-sm text-white/70 tracking-widest">{item.label}</div>
+          <div className="text-xs md:text-sm text-white/70 tracking-widest">
+            {item.label}
+          </div>
         </div>
       ))}
     </div>

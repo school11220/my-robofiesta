@@ -1,7 +1,7 @@
 export const events =[
   {
     "eventName": "HACK-A-DAY",
-    "date": "13 October 2025",
+    "date": "1 November 2025",
     "time": "9:00 am – 5:00 pm",
     "venue": "Bengaluru",
     "image": "../../public/img/hackaday.png",

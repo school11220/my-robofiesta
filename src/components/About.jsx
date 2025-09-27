@@ -2,7 +2,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 export default function About() {
   return (
-    <section id="about" className="section py-20 md:py-28">
+    <section id="about" className="section py-12 md:py-6">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <SectionHeading>About Us</SectionHeading>
         <div className="mt-4 space-y-4">

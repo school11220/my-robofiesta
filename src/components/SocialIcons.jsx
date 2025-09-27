@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const IconWrapper = ({ children, href }) => (
   <a
     href={href}
@@ -9,9 +11,14 @@ const IconWrapper = ({ children, href }) => (
   </a>
 );
 
+IconWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired
+};
+
 export function GitHubIcon() {
   return (
-    <IconWrapper href="#">
+    <IconWrapper href="https://github.com/biswaisop">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -31,7 +38,7 @@ export function GitHubIcon() {
 
 export function TwitterIcon() {
   return (
-    <IconWrapper href="#">
+    <IconWrapper href="https://twitter.com/robofiesta_">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -49,9 +56,17 @@ export function TwitterIcon() {
   );
 }
 
+// Social media links
+const SOCIAL_LINKS = {
+  YOUTUBE: 'https://www.youtube.com/channel/UCoZ_0Esy_kdOT20Ee71z1JQ',
+  INSTAGRAM: 'https://www.instagram.com/robofiesta.rvitm/',
+  GITHUB: 'https://github.com/biswaisop',
+  TWITTER: 'https://twitter.com/robofiesta_'
+};
+
 export function YouTubeIcon() {
   return (
-    <IconWrapper href="https://www.youtube.com/channel/UCoZ_0Esy_kdOT20Ee71z1JQ">
+    <IconWrapper href={SOCIAL_LINKS.YOUTUBE}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -63,8 +78,8 @@ export function YouTubeIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
-        <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"/>
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+        <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" />
       </svg>
     </IconWrapper>
   );
@@ -72,7 +87,7 @@ export function YouTubeIcon() {
 
 export function InstagramIcon() {
   return (
-    <IconWrapper href="#">
+    <IconWrapper href={SOCIAL_LINKS.INSTAGRAM}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -84,9 +99,9 @@ export function InstagramIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
       </svg>
     </IconWrapper>
   );

@@ -3,7 +3,7 @@ import GlassCard from "@/components/GlassCard";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section py-20 md:py-28">
+    <section id="contact" className="section py-12 md:py-6">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <SectionHeading className="mb-6">Contact</SectionHeading>
         <div className="grid md:grid-cols-2 gap-6">

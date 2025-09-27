@@ -1,3 +1,4 @@
+// src/components/ClientLayout.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -5,45 +6,49 @@ import WelcomeScreen from "./WelcomeScreen";
 import LoadingScreen from "./LoadingScreen";
 
 export default function ClientLayout({ children }) {
-  const [currentScreen, setCurrentScreen] = useState("main"); // Default to main for returning visits
+  const [screen, setScreen] = useState("main"); // "welcome" | "loading" | "main"
   const [isFirstVisit, setIsFirstVisit] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
+  // Handle initial mounting and hydration
   useEffect(() => {
-    // Check if this is the first visit in this session
-    const hasVisited = sessionStorage.getItem("robofiesta_visited");
-    
-    if (!hasVisited) {
-      // First visit - show welcome screen
-      setIsFirstVisit(true);
-      setCurrentScreen("welcome");
-      sessionStorage.setItem("robofiesta_visited", "true");
-    } else {
-      // Returning visit - go straight to main content
-      setCurrentScreen("main");
+    setIsMounted(true);
+
+    // Check if this is a first visit
+    let isFirst = false;
+    try {
+      const hasVisited = window.sessionStorage.getItem("robofiesta_visited");
+      if (!hasVisited) {
+        isFirst = true;
+        window.sessionStorage.setItem("robofiesta_visited", "true");
+      }
+    } catch (error) {
+      console.error("Failed to access sessionStorage:", error);
     }
+
+    if (isFirst) {
+      setIsFirstVisit(true);
+      setScreen("welcome");
+    }
+
+    return () => setIsMounted(false);
   }, []);
 
-  const handleEnterPressed = () => {
-    setCurrentScreen("loading");
-    // After loading completes, show main content
-    setTimeout(() => {
-      setCurrentScreen("main");
-    }, 5000);
-  };
+  const handleEnter = () => setScreen("loading");
+  const handleLoadingComplete = () => setScreen("main");
 
-  // For first visit, show welcome screen
-  if (isFirstVisit && currentScreen === "welcome") {
-    return <WelcomeScreen onEnter={handleEnterPressed} />;
+  if (isFirstVisit && screen === "welcome") {
+    return <WelcomeScreen onEnter={handleEnter} />;
   }
 
-  // For first visit, show loading screen after welcome
-  if (isFirstVisit && currentScreen === "loading") {
-    return <LoadingScreen />;
+  if (isFirstVisit && screen === "loading") {
+    // ✅ FIX: Changed `onFinish` to `onLoaded` to match the LoadingScreen component
+    return <LoadingScreen onLoaded={handleLoadingComplete} />;
   }
 
-  // For all cases (first visit after loading, or returning visits), show main content
+  // When the loading sequence is done, this renders your page
   return (
-    <div className={`main-content bg-transparent ${isFirstVisit && currentScreen === "main" ? "first-visit-fade" : ""}`}>
+    <div className={`main-content ${isFirstVisit ? "first-visit-fade" : ""}`}>
       {children}
     </div>
   );

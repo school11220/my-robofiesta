@@ -1,9 +1,17 @@
-import Link from "next/link";
-import { GitHubIcon, TwitterIcon, YouTubeIcon, InstagramIcon } from "./SocialIcons";
+// src/components/Footer.jsx
+"use client";
+
+import Link from "next/link"; // ✅ Using the Next.js Link component
+import {
+  GitHubIcon,
+  TwitterIcon,
+  YouTubeIcon,
+  InstagramIcon,
+} from "./SocialIcons"; // ✅ Importing all necessary icons
 
 export default function Footer() {
   return (
-    <footer className="mt-20 md:mt-28">
+    <footer className="mt-20 md:mt-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="glass p-8 rounded-t-2xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -15,12 +23,13 @@ export default function Footer() {
               
               {/* Footer Navigation */}
               <div className="flex items-center gap-4 text-sm">
-                <a 
+                {/* ✅ Using Next.js <Link> for faster, client-side navigation */}
+                <Link 
                   href="/team" 
                   className="text-white/70 hover:text-[var(--neon)] transition-colors duration-200"
                 >
                   About Team
-                </a>
+                </Link>
                 <span className="text-white/30">•</span>
                 <a 
                   href="mailto:robofiesta.rvitm@rvei.edu.in" 
@@ -33,28 +42,14 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-6">
-              {/* Uncomment if needed */}
-              {/* <a
-                href="https://youtube.com/..."
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="hover:scale-110 transition-transform duration-200"
-              >
-                <YouTubeIcon />
-              </a> */}
-
-              <a
-                href="https://www.instagram.com/robofiesta.rvitm/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                title="Instagram"
-                className="hover:scale-110 transition-transform duration-200"
-              >
-                <InstagramIcon />
-                <span className="sr-only">Instagram</span>
-              </a>
+              {/* ✅ FIX: The Icon components already include the <a> tag. 
+                Wrapping them in another <a> tag is incorrect. 
+                Just render the components directly.
+              */}
+              <TwitterIcon />
+              <GitHubIcon />
+              <YouTubeIcon />
+              <InstagramIcon />
             </div>
           </div>
 
