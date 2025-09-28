@@ -12,13 +12,15 @@ const StarBorder = ({
   children,
   ...rest
 }) => {
+  // ✅ FIX: Destructure the style prop from rest to avoid overwriting it.
+  const { style: restStyle, ...otherProps } = rest;
   const [isHovered, setIsHovered] = useState(false);
 
   const componentStyle = {
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     transform: isHovered ? 'scale(1.05)' : 'scale(1)',
     boxShadow: isHovered ? `0 0 25px -5px ${color}` : 'none',
-    ...rest.style,
+    ...restStyle, // Safely merge any passed-in style object
   };
 
   const starStyle = {
@@ -43,7 +45,7 @@ const StarBorder = ({
       style={componentStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      {...rest}
+      {...otherProps} // ✅ Spread the remaining props without the style prop.
     >
       <div
         className="absolute w-[300%] h-[50%] bottom-[-11px] right-[-250%] rounded-full animate-star-movement-bottom z-0"

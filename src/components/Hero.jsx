@@ -7,43 +7,50 @@ import { EVENT_DATE_ISO } from "@/lib/constants";
 import Image from "next/image";
 
 export default function Hero() {
+  // State for the 3D tilt and parallax effects (relative to center)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // State for the cursor light effect (relative to top-left)
+  const [lightPosition, setLightPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
-    // Get the position and dimensions of the hero section
     const rect = e.currentTarget.getBoundingClientRect();
-    // Calculate mouse position relative to the section's center
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    setMousePosition({ x, y });
+    
+    // Position for the light (from top-left of the section)
+    const lightX = e.clientX - rect.left;
+    const lightY = e.clientY - rect.top;
+    setLightPosition({ x: lightX, y: lightY });
+
+    // Position for 3D tilt/parallax (from center of the section)
+    const centerX = e.clientX - rect.left - rect.width / 2;
+    const centerY = e.clientY - rect.top - rect.height / 2;
+    setMousePosition({ x: centerX, y: centerY });
   };
 
-  // Calculate rotation angles for the 3D card
-  const rotateX = (-mousePosition.y / 40).toFixed(2); // Divide by a larger number for less rotation
-  const rotateY = (mousePosition.x / 40).toFixed(2);
+  // Calculations for the 3D card tilt
+  const rotateX = -mousePosition.y / 40;
+  const rotateY = mousePosition.x / 40;
 
-  // Calculate subtle parallax movement for the left content
-  const parallaxX = (mousePosition.x / 100).toFixed(2);
-  const parallaxY = (mousePosition.y / 100).toFixed(2);
+  // Calculations for the parallax movement
+  const parallaxX = mousePosition.x / 100;
+  const parallaxY = mousePosition.y / 100;
 
   return (
-    // Add onMouseMove to the root section to track the cursor
     <section
       id="home"
-      className="section pt-24 md:pt-32 pb-16 md:pb-20 relative overflow-hidden"
+      className="relative z-[1] overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-32"
       onMouseMove={handleMouseMove}
-      style={{ perspective: '2000px' }} // Set perspective for 3D effect
+      style={{ perspective: '2000px' }}
     >
-      {/* Interactive Cursor Light */}
+      {/* Interactive Cursor Light - now follows cursor precisely */}
       <div
-        className="pointer-events-none absolute -inset-40 z-20 rounded-full transition-all duration-300"
+        className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(600px at ${mousePosition.x + 400}px ${mousePosition.y + 300}px, rgba(0, 255, 240, 0.1), transparent 80%)`,
+          background: `radial-gradient(600px at ${lightPosition.x}px ${lightPosition.y}px, rgba(0, 255, 240, 0.1), transparent 80%)`,
         }}
-      ></div>
+      />
 
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-5">
+      <div className="mx-auto max-w-7xl px-2 md:px-6">
+        <div className="flex flex-col items-center gap-5 md:flex-row md:items-start">
           
           {/* Left Content with Parallax Effect */}
           <div
@@ -60,26 +67,26 @@ export default function Hero() {
                 priority
               />
             </div>
-            <p className="mt-4 text-white/80 text-lg md:text-xl">
+            <p className="mt-4 text-lg text-white/80 md:text-xl">
               RoboFiesta 2025 — A Tech event celebrating AI, Robotics, and Tech.
             </p>
             <p className="mt-2 text-white/70">
               Oct 13, 2025 | Bengaluru, India
             </p>
-            <p className="mt-4 text-white/80 text-lg md:text-xl">
+            <p className="mt-4 text-lg text-white/80 md:text-xl">
               Our Pre Events Start in
             </p>
             <Countdown targetDate={EVENT_DATE_ISO} />
           </div>
 
           {/* Right Card with 3D Tilt Effect */}
-          <div className="flex-1 w-full">
+          <div className="w-full flex-1">
             <div
-              className="glass p-6 md:p-10 text-center transition-transform duration-300 ease-out"
+              className="glass p-6 text-center transition-transform duration-300 ease-out md:p-10"
               style={{ transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)` }}
             >
-              <p className="mt-4 text-white/80 text-lg md:text-xl">Featured Hackathon</p>
-              <div className="font-orbitron text-3xl md:text-5xl font-extrabold mt-2 neon-subtitle">
+              <p className="mt-4 text-lg text-white/80 md:text-xl">Featured Hackathon</p>
+              <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl">
                 Hack-A-Day
               </div>
               <div className="mt-6 grid grid-cols-3 gap-3">
