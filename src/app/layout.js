@@ -1,5 +1,4 @@
 import "./globals.css";
-// ✅ 1. Cleaned up and consolidated all font imports at the top.
 import { Geist, Geist_Mono, Orbitron, Oxanium } from "next/font/google";
 import ClientLayout from "@/components/ClientLayout";
 
@@ -30,15 +29,14 @@ export const metadata = {
     "Experience the ultimate tech hackathon where innovation meets the cosmos.",
 };
 
-// ✅ 2. RootLayout is now a clean Server Component.
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${oxanium.variable} antialiased relative min-h-screen`}
       >
-        {/* ✅ 3. All logic (like the loading screen) is correctly delegated to the ClientLayout component. */}
         <ClientLayout>{children}</ClientLayout>
+        {/* ✅ 2. Keep the Footer component and remove markers */}
       </body>
     </html>
   );
