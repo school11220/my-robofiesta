@@ -36,7 +36,6 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${oxanium.variable} antialiased relative min-h-screen`}
       >
         <ClientLayout>{children}</ClientLayout>
-        {/* ✅ 2. Keep the Footer component and remove markers */}
       </body>
     </html>
   );

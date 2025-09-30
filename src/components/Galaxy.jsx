@@ -174,17 +174,17 @@ void main() {
 export default function Galaxy({
   focal = [0.5, 0.5],
   rotation = [1.0, 0.0],
-  starSpeed = 0.5,
-  density = 1,
+  starSpeed = 0.8,
+  density = 0.8,
   hueShift = 140,
   disableAnimation = false,
-  speed = 1.0,
-  mouseInteraction = true,
-  glowIntensity = 0.3,
+  speed = 0.1,
+  mouseInteraction = false,
+  glowIntensity = 0.1,
   saturation = 0.0,
-  mouseRepulsion = true,
+  mouseRepulsion = false,
   repulsionStrength = 2,
-  twinkleIntensity = 0.3,
+  twinkleIntensity = 0.1,
   rotationSpeed = 0.1,
   autoCenterRepulsion = 0,
   transparent = true,
@@ -330,5 +330,5 @@ export default function Galaxy({
     transparent
   ]);
 
-  return <div ref={ctnDom} className="w-full h-full relative" {...rest} />;
+  return <div ref={ctnDom} className="w-full h-full fixed inset-0 -z-10" {...rest} />;
 }

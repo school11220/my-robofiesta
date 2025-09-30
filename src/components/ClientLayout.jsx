@@ -14,7 +14,6 @@ export default function ClientLayout({ children }) {
   useEffect(() => {
     setIsMounted(true);
 
-    // Check if this is a first visit
     let isFirst = false;
     try {
       const hasVisited = window.sessionStorage.getItem("robofiesta_visited");
