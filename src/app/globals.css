@@ -500,34 +500,71 @@ body {
 
 .enter-button {
   position: relative;
-  background: transparent;
-  border: 2px solid var(--neon);
+  border: none;
   color: white;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 12px; /* Sharper corners for a tech look */
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background: rgba(0, 255, 240, 0.1);
+  transition: all 0.3s ease;
+  padding: 1rem 2rem; /* Ensure consistent padding */
+
+  /* Multi-layered cosmic background */
+  background: 
+    radial-gradient(circle at center, rgba(0, 255, 240, 0.2), transparent 70%),
+    linear-gradient(135deg, rgba(14, 20, 27, 0.6), rgba(22, 27, 34, 0.8)),
+    url('/img/stars.png'); /* A repeating star texture */
+  
+  background-size: 200% 200%, 100% 100%, 300px 300px;
+  animation: move-background 30s linear infinite;
 }
 
+/* Animate the background position for a slow, cosmic drift */
+@keyframes move-background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pulsing glow effect on hover */
 .enter-button:hover {
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 30px rgba(0, 255, 240, 0.3);
+  transform: scale(1.05);
+  animation: pulse-glow 2s infinite ease-in-out;
 }
 
-.enter-button-glow {
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px -5px var(--neon); }
+  50% { box-shadow: 0 0 40px 5px var(--neon); }
+}
+
+/* Create the 4 corner brackets using pseudo-elements */
+.enter-button::before,
+.enter-button::after,
+.enter-button-text::before,
+.enter-button-text::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, var(--neon), var(--neon-purple), var(--neon));
-  opacity: 0;
-  border-radius: 50px;
-  transition: opacity 0.3s ease;
-  z-index: -1;
+  width: 1rem;
+  height: 1rem;
+  border-color: var(--neon);
+  border-style: solid;
+  transition: transform 0.3s ease;
 }
 
-.enter-button:hover .enter-button-glow {
-  opacity: 0.2;
-}
+/* Top-left */
+.enter-button::before { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+/* Top-right */
+.enter-button::after { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+/* Bottom-left */
+.enter-button-text::before { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+/* Bottom-right */
+.enter-button-text::after { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+
+/* Animate the brackets on hover */
+.enter-button:hover::before { transform: translate(-5px, -5px); }
+.enter-button:hover::after { transform: translate(5px, -5px); }
+.enter-button:hover .enter-button-text::before { transform: translate(-5px, 5px); }
+.enter-button:hover .enter-button-text::after { transform: translate(5px, 5px); }
 
 .floating-particles {
   position: absolute;
@@ -1008,43 +1045,77 @@ body {
     opacity: 0;
   }
 }
-.terminal-container {
-  background-color: #0d1117; /* GitHub dark mode color */
-  border: 1px solid var(--neon-purple);
-  border-radius: 8px;
-  box-shadow: 0 0 20px -5px var(--neon-purple);
-  overflow: hidden;
-}
+/* src/app/globals.css */
 
-.terminal-header {
-  background-color: #161b22;
-  padding: 8px 16px;
-  font-size: 0.8rem;
-  color: #c9d1d9;
-  border-bottom: 1px solid var(--neon-purple);
+.terminal-container {
+  background-color: #010101;
+  border-radius: 4px;
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  overflow: hidden;
+  font-family: ui-monospace, Menlo, Monaco, "Courier New", monospace;
 }
 
 .faq-question {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
   padding: 4px 0;
   transition: color 0.2s ease;
-  color: #c9d1d9; /* Default text color */
+  color: #EAEAEA;
 }
 
-.faq-question:hover {
-  color: var(--neon);
+.faq-prompt {
+  color: #888;
+  margin-right: 0.5rem;
+  white-space: nowrap;
 }
 
-.faq-question.active {
-  color: var(--neon);
+.faq-question:hover .faq-question-text,
+.faq-question.active .faq-question-text {
+  color: #33ff33; /* Classic terminal green */
 }
 
-.prompt-line .blinking-cursor {
-  animation: blink-caret 1s step-end infinite;
+.faq-answer {
+  color: #EAEAEA;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+/* For the blinking cursor animation */
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #33ff33;
+  }
 }
 
 /* You probably already have this from the WelcomeScreen, but ensure it exists */
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: var(--neon); }
+}
+/* src/app/globals.css */
+
+.blinking-cursor {
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: var(--neon-purple); /* Or whatever color you prefer */
+  }
 }

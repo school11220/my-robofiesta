@@ -1,54 +1,58 @@
 // src/components/ClientLayout.jsx
+
 "use client";
 
 import { useState, useEffect } from "react";
-import WelcomeScreen from "./WelcomeScreen";
-import LoadingScreen from "./LoadingScreen";
+import dynamic from 'next/dynamic';
+
+
+// Dynamically import all heavy, client-side only components
+const WelcomeScreen = dynamic(() => import('./WelcomeScreen'), { ssr: false });
+const LoadingScreen = dynamic(() => import('./LoadingScreen'), { ssr: false });
 
 export default function ClientLayout({ children }) {
-  const [screen, setScreen] = useState("main"); // "welcome" | "loading" | "main"
+  const [screen, setScreen] = useState("main");
   const [isFirstVisit, setIsFirstVisit] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  // Handle initial mounting and hydration
   useEffect(() => {
     setIsMounted(true);
-
-    let isFirst = false;
     try {
-      const hasVisited = window.sessionStorage.getItem("robofiesta_visited");
-      if (!hasVisited) {
-        isFirst = true;
-        window.sessionStorage.setItem("robofiesta_visited", "true");
+      if (!sessionStorage.getItem("robofiesta_visited")) {
+        setIsFirstVisit(true);
+        setScreen("welcome");
+        sessionStorage.setItem("robofiesta_visited", "true");
       }
     } catch (error) {
       console.error("Failed to access sessionStorage:", error);
     }
-
-    if (isFirst) {
-      setIsFirstVisit(true);
-      setScreen("welcome");
-    }
-
-    return () => setIsMounted(false);
   }, []);
 
   const handleEnter = () => setScreen("loading");
   const handleLoadingComplete = () => setScreen("main");
+
+  if (!isMounted) {
+    return null;
+  }
 
   if (isFirstVisit && screen === "welcome") {
     return <WelcomeScreen onEnter={handleEnter} />;
   }
 
   if (isFirstVisit && screen === "loading") {
-    // ✅ FIX: Changed `onFinish` to `onLoaded` to match the LoadingScreen component
     return <LoadingScreen onLoaded={handleLoadingComplete} />;
   }
 
-  // When the loading sequence is done, this renders your page
+  // ✅ This is the final layout structure
   return (
-    <div className={`main-content ${isFirstVisit ? "first-visit-fade" : ""}`}>
-      {children}
+    <div className="flex flex-col min-h-screen">
+      
+      {/* The 'relative z-10' ensures this content is on top of the Galaxy background. */}
+      {/* The 'flex-grow' pushes the footer down to the bottom of the screen. */}
+      <main className="relative z-10 flex-grow">
+        {children}
+      </main>
+      
     </div>
   );
 }

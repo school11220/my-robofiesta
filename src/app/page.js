@@ -6,8 +6,8 @@ import Schedule from "@/components/Schedule";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Galaxy from "@/components/Galaxy";
-// import FAQ from "@/components/FAQ";
 import TeamPage from "./team/page";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
         <Schedule />
         {/* <Events /> */}
         <Contact />
-          {/* <FAQ /> */}
+        <FAQ /> 
         <Footer />
       </div>
     </div>

@@ -5,19 +5,13 @@ import { useSearchParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EventCard from '@/components/EventCard';
-import DateFilter from '@/components/DateFilter'; // Assuming you have this component
+import DateFilter from '@/components/DateFilter';
 import { events } from '@/data/events';
-import Galaxy from '@/components/Galaxy'; // ✅ 1. Import the Galaxy component
 
 function EventsPageContent() {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const [selectedDate, setSelectedDate] = useState('all');
-
-  const uniqueDates = useMemo(() => {
-    const dates = [...new Set(events.map(event => event.date))];
-    return dates.sort((a, b) => new Date(a) - new Date(b));
-  }, []);
 
   const filteredEvents = useMemo(() => {
     let filtered = events;
@@ -36,15 +30,20 @@ function EventsPageContent() {
 
   return (
     <div className="min-h-screen text-white relative">
-       {/* ✅ 2. Add the Galaxy component as the background */}
+      {/* ✅ Background updated to match the Team Page */}
+      <div className="absolute inset-0 -z-10">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
+      </div>
       
       <div className="relative z-10">
         <Navbar />
-        
         <main className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-center mb-12 font-orbitron neon-title animate-glow">Events</h1>
-                  <Galaxy />
-
+          <h1 className="text-4xl font-bold text-center mb-12 font-orbitron neon-title animate-glow">
+            Events
+          </h1>
+          
           <DateFilter events={events} onDateChange={setSelectedDate} />
 
           {filteredEvents.length > 0 ? (
@@ -55,13 +54,12 @@ function EventsPageContent() {
             </div>
           ) : (
             <div className="text-center text-white/70 mt-8">
-              <p className="text-lg mb-4">No events found.</p>
+              <p className="text-lg mb-4">No events found for the selected criteria.</p>
             </div>
           )}
         </main>
+        <Footer />
       </div>
-          <Footer />
-
     </div>
   );
 }

@@ -4,8 +4,8 @@ import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 
 export default function LoadingScreen({ onLoaded }) {
-  const [isAnimating, setIsAnimating] = useState(false); // For the final screen fade
-  const [isFinishing, setIsFinishing] = useState(false); // ✅ For the initial zoom/fade effect
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isFinishing, setIsFinishing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }); 
 
@@ -17,14 +17,12 @@ export default function LoadingScreen({ onLoaded }) {
       setProgress(prev => Math.min(prev + 5, 100));
     }, 120);
 
-    // ✅ Timer to start the "finishing" sequence (zoom in, text fade)
     const finishTimer = setTimeout(() => {
       clearInterval(progressInterval);
       setProgress(100);
       setIsFinishing(true);
-    }, LOADING_DURATION - 800); // Start the effect 800ms before the end
+    }, LOADING_DURATION - 800);
 
-    // ✅ Timer to start the final screen fade and call onLoaded
     const mainTimer = setTimeout(() => {
       setIsAnimating(true);
       setTimeout(onLoaded, FADE_OUT_DURATION);
@@ -44,25 +42,23 @@ export default function LoadingScreen({ onLoaded }) {
   };
   
   const orbitalStyle = useMemo(() => ({
-    // ✅ Apply the 3D rotation only when NOT in the final animation phase
     transform: isFinishing ? '' : `rotateY(${mousePosition.x * 15}deg) rotateX(${-mousePosition.y * 15}deg)`,
   }), [mousePosition, isFinishing]);
-
 
   return (
     <div 
       className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}
       onMouseMove={handleMouseMove}
     >
+      {/* ✅ Background updated to match the Team Page */}
       <div className="absolute inset-0">
-        <div className="loading-stars"></div>
-        <div className="loading-twinkling"></div>
-        <div className="loading-cosmic-waves"></div>
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
       </div>
       <div className="scanning-lines"></div>
 
       <div className="relative z-10 text-center" style={{ perspective: '1000px' }}>
-        {/* ✅ Use isFinishing to fade out the logo and text first */}
         <div className={`mb-8 transition-opacity duration-300 ${isFinishing ? 'opacity-0' : 'opacity-100'}`}>
           <div className="mb-4 flex justify-center relative">
             <Image
@@ -79,7 +75,6 @@ export default function LoadingScreen({ onLoaded }) {
           </p>
         </div>
 
-        {/* ✅ Apply 'zoom-in' and 'warp-out' classes based on the animation phase */}
         <div 
           className={`loading-orbit-enhanced ${isFinishing ? (isAnimating ? 'warp-out' : 'zoom-in') : ''}`} 
           style={orbitalStyle}
@@ -103,7 +98,6 @@ export default function LoadingScreen({ onLoaded }) {
           </div>
         </div>
 
-        {/* ✅ Use isFinishing to fade out the progress bar */}
         <div className={`mt-8 transition-opacity duration-300 ${isFinishing ? 'opacity-0' : 'opacity-100'}`}>
           <div className="progress-container mb-4">
             <div className="progress-bar">
