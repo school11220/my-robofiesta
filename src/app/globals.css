@@ -1119,3 +1119,104 @@ body {
     color: var(--neon-purple); /* Or whatever color you prefer */
   }
 }
+/* src/app/globals.css */
+
+.chat-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 9999px;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:  
+    0 0 5px #4f46e5,    /* Inner subtle glow */
+    0 0 10px #4f46e5; 
+  transition: transform 0.2s ease-in-out;
+  z-index: 50;
+}
+.chat-button:hover {
+  transform: scale(1.1);
+}
+.chat-window {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 90vw;
+  max-width: 420px;
+  height: 70vh;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 50;
+}
+.chat-close-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+}
+.chat-close-button:hover {
+  color: #e5e7eb;
+}
+/* src/app/globals.css */
+
+/* ... (previous chatbot styles) ... */
+
+.chat-window {
+  /* ... existing styles ... */
+  background-color: transparent; /* Make the window itself transparent */
+  border: none; /* Remove border if you want the background to be fully visible */
+  overflow: hidden; /* Crucial to contain the background animations */
+}
+
+/* New style for the chatbot's internal section */
+.chatbot-section {
+  position: relative; /* Establish positioning context for absolute children */
+  background-color: #111827; /* Dark background for the content areas */
+  border-radius: 0.75rem; /* Match parent's border-radius if chat-window is transparent */
+  overflow: hidden; /* Again, crucial to contain the internal animations */
+}
+
+/* Ensure prompt text and input are above the background */
+.chatbot-section h2,
+.chatbot-section .flex-grow,
+.chatbot-section form {
+  background-color: rgba(17, 24, 39, 0.8); /* Slightly transparent background for readability */
+  padding: 0.5rem 0.5rem; /* Add some padding if needed */
+  border-radius: 0.25rem;
+}
+
+/* Adjust prompt for better visibility */
+.faq-prompt {
+  background-color: transparent; /* Ensure prompt background is clear */
+}
+
+/* Z-index adjustments */
+.chat-window > .chatbot-section {
+  z-index: 1; /* Ensure this section is above the starfield in the main window */
+}
+.chat-window .stars,
+.chat-window .twinkling,
+.chat-window .clouds {
+  z-index: 0; /* Keep background layers behind content */
+}
+
+/* Make sure the scrollable content has a darker background too */
+.chat-window .flex-grow {
+    background-color: rgba(17, 24, 39, 0.8); /* Darker background for message area */
+    margin-bottom: -1rem; /* Adjust if extra space appears due to padding */
+    padding-bottom: 1rem; /* Ensure content is visible above form */
+}

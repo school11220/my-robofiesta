@@ -1,4 +1,3 @@
-// src/components/ClientLayout.jsx
 
 "use client";
 
@@ -6,7 +5,6 @@ import { useState, useEffect } from "react";
 import dynamic from 'next/dynamic';
 
 
-// Dynamically import all heavy, client-side only components
 const WelcomeScreen = dynamic(() => import('./WelcomeScreen'), { ssr: false });
 const LoadingScreen = dynamic(() => import('./LoadingScreen'), { ssr: false });
 

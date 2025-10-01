@@ -18,8 +18,6 @@ export default function Home() {
         <div className="twinkling"></div>
         <div className="clouds"></div>
       </div>
-      
-      {/* Main content */}
       <div className="relative z-10">
         <Navbar />
         <Hero />
