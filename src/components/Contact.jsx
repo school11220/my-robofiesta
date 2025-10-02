@@ -64,10 +64,12 @@ export default function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Venue Map"
+
+            title="Map of RV Institute of Technology and Management" // Improved title
           />
         </div>
       </div>
     </section>
   );
 }
+

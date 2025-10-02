@@ -4,7 +4,7 @@ export const events =[
     "date": "1 November 2025",
     "time": "9:00 am – 5:00 pm",
     "venue": "Bengaluru",
-    "image": "/img/hackaday.png",
+    "image": "/img/hack a day.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/hack-a-day"
   },
   {
@@ -116,7 +116,7 @@ export const events =[
     "date": "5 November 2025",
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
-    "image": "/img/buildyourweb.png",
+    "image": "/img/byw.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/build-your-web"
   },
   {

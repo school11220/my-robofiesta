@@ -1171,12 +1171,8 @@ body {
 .chat-close-button:hover {
   color: #e5e7eb;
 }
-/* src/app/globals.css */
-
-/* ... (previous chatbot styles) ... */
 
 .chat-window {
-  /* ... existing styles ... */
   background-color: transparent; /* Make the window itself transparent */
   border: none; /* Remove border if you want the background to be fully visible */
   overflow: hidden; /* Crucial to contain the background animations */
