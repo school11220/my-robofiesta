@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^10.0.3",
+    "framer-motion": "^12.23.24",
     "lodash": "^4.17.21",
     "next": "15.5.3",
     "ogl": "^1.0.11",

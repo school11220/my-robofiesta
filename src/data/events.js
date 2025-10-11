@@ -1,15 +1,15 @@
 export const events =[
   {
     "eventName": "HACK-A-DAY",
-    "date": "1 November 2025",
-    "time": "9:00 am – 5:00 pm",
+    "date": "22-23 November 2025",
+    "time": "7:00 pm – 9:00 am",
     "venue": "Bengaluru",
-    "image": "/img/hack a day.png",
+    "image": "/img/hackaday.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/hack-a-day"
   },
   {
     "eventName": "BGMI",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
@@ -17,7 +17,7 @@ export const events =[
   },
   {
     "eventName": "FIFA",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "11:00 am – 1:00 pm",
     "venue": "MCA Sem Hall",
     "image": "/img/fifa.png",
@@ -25,7 +25,7 @@ export const events =[
   },
   {
     "eventName": "Free Fire",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "2:00 pm – 5:00 pm",
     "venue": "MCA Sem Hall",
     "image": "/img/freefire.png",
@@ -33,7 +33,7 @@ export const events =[
   },
   {
     "eventName": "Save The Egg",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 3:00 pm",
     "venue": "Drawing Room",
     "image": "/img/save-the-egg.png",
@@ -41,7 +41,7 @@ export const events =[
   },
   {
     "eventName": "Valorant",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "9:00 am – 5:00 pm",
     "venue": "Lab 3",
     "image": "/img/valo.png",
@@ -49,7 +49,7 @@ export const events =[
   },
   {
     "eventName": "Capture the Flag",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 1:00 pm",
     "venue": "Lab 3",
     "image": "/img/ctf.png",
@@ -57,7 +57,7 @@ export const events =[
   },
   {
     "eventName": "IPL Auction",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "10:00 am – 4:00 pm",
     "venue": "Auditorium",
     "image": "/img/ipl.png",
@@ -65,7 +65,7 @@ export const events =[
   },
   {
     "eventName": "Anime Quiz",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "9:30 am - 11:30 am",
     "venue": "6TH FLOOR SEM HALL",
     "image": "/img/animequiz.png",
@@ -73,7 +73,7 @@ export const events =[
   },
   {
     "eventName": "Treasure Hunt",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": null,
     "image": "/img/treasurehunt.png",
@@ -81,7 +81,7 @@ export const events =[
   },
   {
     "eventName": "Sell Me This Pen",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "12:00 pm – 2:00 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "/img/sellmethispen.png",
@@ -89,7 +89,7 @@ export const events =[
   },
   {
     "eventName": "Great Tech Quest",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": "1ST FLOOR SEM HALL",
     "image": "/img/great tech quest.png",
@@ -97,7 +97,7 @@ export const events =[
   },
   {
     "eventName": "Pitch In The Box",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "2:00 pm – 4:00 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "/img/pitch in the box.png",
@@ -105,7 +105,7 @@ export const events =[
   },
   {
     "eventName": "Bug Squash",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "1:00 pm – 3:00 pm",
     "venue": "Lab 3",
     "image": "/img/bugsquash.png",
@@ -113,7 +113,7 @@ export const events =[
   },
   {
     "eventName": "Build Your Web",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
     "image": "/img/byw.png",
@@ -121,7 +121,7 @@ export const events =[
   },
   {
     "eventName": "Robo Race",
-    "date": "5 November 2025",
+    "date": "26 November 2025",
     "time": "9:30 am – 12:30 pm",
     "venue": "GROUND FLOOR LOBBY",
     "image": "/img/roborace.png",
@@ -129,7 +129,7 @@ export const events =[
   },
   {
     "eventName": "CODE BATTLE",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 1",
     "image": "/img/codebattle.png",
@@ -137,7 +137,7 @@ export const events =[
   },
   {
     "eventName": "Circuitrix",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 2",
     "image": "/img/circuitrix.png",
@@ -145,7 +145,7 @@ export const events =[
   },
   {
     "eventName": "Hardware Project Expo",
-    "date": "4 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
     "image": "/img/hardware.png",
@@ -154,7 +154,7 @@ export const events =[
   {
     "eventName": "Squid Game",
     "date": "13 October 2025",
-    "time": "9:00 am – 9:05 am",
+    "time": "9:00 am – 12:00 pm",
     "venue": "Student Interaction Area",
     "image": "/img/squidgames.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/squid-game"

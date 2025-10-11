@@ -4,14 +4,11 @@ import Countdown from "@/components/Countdown";
 import StarBorder from "@/components/StarBorder";
 import { EVENT_DATE_ISO } from "@/lib/constants";
 import Image from "next/image";
-
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative z-[1] overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-32"
-    >
-
+      className="relative z-[1] overflow-hidden pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-24">
       <div className="mx-auto max-w-7xl px-2 md:px-6">
         <div className="flex flex-col items-center gap-5 md:flex-row md:items-start">
           

@@ -87,6 +87,7 @@ export default function Navbar() {
             <NavLink href="/events">Events</NavLink>
             <NavLink href="/#schedule">Schedule</NavLink>
             <NavLink href="/#contact">Contact</NavLink>
+            <NavLink href="/team">Team</NavLink>
           </nav>
         </div>
 
@@ -98,18 +99,19 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="glass sticky top-4 flex flex-col items-center gap-2 px-4 py-2">
-            <div className="relative w-full max-w-xs mb-1">
+            {/* <div className="relative w-full max-w-xs mb-1">
               <form onSubmit={handleSearch}>
                 <input type="text" value={searchQuery} onChange={handleInputChange} placeholder="Search events..." className="w-full px-4 py-1.5 bg-black/20 border border-[var(--neon)]/30 rounded-lg text-white text-sm" />
                 <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--neon)]/70 hover:text-[var(--neon)]"><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
               </form>
               {suggestions.length > 0 && <ul className="absolute w-full mt-2 bg-black/80 backdrop-blur-md border-2 border-[var(--neon)]/50 rounded-lg overflow-hidden z-20">{suggestions.map(event => event && <li key={event.eventName} onClick={() => handleSuggestionClick(event)} className="px-4 py-2 cursor-pointer text-sm"><div className="flex flex-col"><span className="font-medium">{event.eventName}</span>{(event.date || event.venue) && <span className="text-xs text-[var(--neon)]/70">{[event.date, event.venue].filter(Boolean).join(' • ')}</span>}</div></li>)}</ul>}
-            </div>
+            </div> */}
             <nav className="flex items-center justify-center gap-2 flex-wrap">
               <NavLink href="/#home">Home</NavLink>
               <NavLink href="/#schedule">Schedule</NavLink>
               <NavLink href="/events">Events</NavLink>
               <NavLink href="/#contact">Contact</NavLink>
+              <NavLink href="/team">Team</NavLink>
             </nav>
           </div>
         </div>
