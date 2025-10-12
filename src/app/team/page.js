@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import GlassCard from "@/components/GlassCard";
-import { teamMembers, departments } from "@/data/team";
+import { teamMembers, eventCoordinators } from "@/data/team";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,14 +31,14 @@ export default function TeamPage() {
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               The passionate minds behind Robofiesta2025, working together to
-              bring you an unforgettable robotics experience.
+              bring you an unforgettable experience.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sortedMembers.map((member, index) => (
               <GlassCard
                 key={member.name}
-                className="p-8 hover:scale-105 transition-all duration-300"
+                className="p-8"
               >
                 <div className="text-center">
                   {/* Avatar placeholder with neon border */}
@@ -65,10 +65,36 @@ export default function TeamPage() {
               </GlassCard>
             ))}
           </div>
-
-          {/* Join Us Section */}
         </div>
       </section>
+
+      {/* Event Coordinators Section */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionHeading>Our Team</SectionHeading>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {eventCoordinators.map((coordinator, index) => (
+              <div
+                key={index}
+                className="group relative text-center p-3 glass border border-[var(--neon)]/20 hover:border-[var(--neon)]/60 transition-all duration-300 hover:scale-105 cursor-default"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 bg-[var(--neon)]/0 group-hover:bg-[var(--neon)]/5 blur-sm transition-all duration-300"></div>
+                
+                <h3 className="relative font-orbitron text-sm font-semibold text-white/80 group-hover:text-[var(--neon)] transition-colors duration-300">
+                  {coordinator.name}
+                </h3>
+                
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[var(--neon)]/0 group-hover:border-[var(--neon)] transition-all duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[var(--neon)]/0 group-hover:border-[var(--neon)] transition-all duration-300"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer/>
     </main>
     </>

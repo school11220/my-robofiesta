@@ -86,8 +86,8 @@ export default function Navbar() {
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/events">Events</NavLink>
             <NavLink href="/#schedule">Schedule</NavLink>
-            <NavLink href="/#contact">Contact</NavLink>
             <NavLink href="/team">Team</NavLink>
+            <NavLink href="/#contact">Contact</NavLink>
           </nav>
         </div>
 

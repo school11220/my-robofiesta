@@ -30,9 +30,8 @@ export default function Schedule() {
 
   return (
     <section id="schedule" className="section py-12 md:py-16">
+      <SectionHeading className="mb-12 text-center">Schedule</SectionHeading>
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <SectionHeading className="mb-12 text-center">Schedule</SectionHeading>
-        
         <div className="space-y-8">
           {sortedDates.map((date) => (
             <div key={date} className="space-y-4">

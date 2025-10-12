@@ -33,20 +33,30 @@ function getImagePath(eventName, imagePath) {
 
 export default function EventCard({ event }) {
   const imagePath = getImagePath(event.eventName, event.image);
+  const isSoldOut = event.soldOut || !event.checkoutLink;
+  
+  const CardWrapper = isSoldOut ? 'div' : 'a';
+  const linkProps = isSoldOut ? {} : {
+    href: event.checkoutLink,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  };
   
   return (
-    // ✅ FIX: The whole card is now a single anchor tag.
-    // This is better for external links and prevents invalid nested <a> tags.
-    <a 
-      href={event.checkoutLink} 
+    <CardWrapper 
       className="block" 
-      target="_blank" 
-      rel="noopener noreferrer"
+      {...linkProps}
     >
       {/* Added h-full to ensure consistent card height in a grid layout */}
-      <GlassCard className="overflow-hidden flex flex-col group hover:scale-105 transition-transform duration-300 relative cursor-pointer h-full">
+      <GlassCard className={`overflow-hidden flex flex-col group ${!isSoldOut && 'hover:scale-105'} transition-transform duration-300 relative ${!isSoldOut && 'cursor-pointer'} h-full`}>
         {/* Event Image */}
         <div className="relative w-full aspect-video bg-white/5">
+          {/* Sold Out Badge */}
+          {isSoldOut && (
+            <div className="absolute top-3 right-3 z-10 glass px-3 py-1 border-2 border-red-500/60">
+              <span className="font-orbitron text-xs font-bold text-red-500">SOLD OUT</span>
+            </div>
+          )}
           <Image
             src={imagePath}
             alt={event.eventName}
@@ -82,18 +92,22 @@ export default function EventCard({ event }) {
           </div>
           
           <div className="mt-4">
-            {/* ✅ FIX: Removed linking props (as, href, target, rel) to avoid nesting. */}
-            {/* This component now serves as a visual "Register" button inside the main link. */}
-            <StarBorder
-              className="text-xs"
-              color="cyan"
-              speed="2.5s"
-            >
-              Register
-            </StarBorder>
+            {isSoldOut ? (
+              <div className="glass px-4 py-2 text-center border border-red-500/30">
+                <span className="font-orbitron text-xs font-semibold text-red-500">SOLD OUT</span>
+              </div>
+            ) : (
+              <StarBorder
+                className="text-xs"
+                color="cyan"
+                speed="2.5s"
+              >
+                Register
+              </StarBorder>
+            )}
           </div>
         </div>
       </GlassCard>
-    </a>
+    </CardWrapper>
   );
 }

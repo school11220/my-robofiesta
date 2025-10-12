@@ -31,7 +31,7 @@ export default function Hero() {
               Oct 13, 2025 | Bengaluru, India
             </p>
             <p className="mt-4 text-lg text-white/80 md:text-xl">
-              Our Pre Events Start in
+              Our Main Event Starts in
             </p>
             <Countdown targetDate={EVENT_DATE_ISO} />
           </div>

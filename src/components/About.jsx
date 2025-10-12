@@ -3,8 +3,8 @@ import SectionHeading from "@/components/SectionHeading";
 export default function About() {
   return (
     <section id="about" className="section py-12 md:py-6">
+      <SectionHeading>About Us</SectionHeading>
       <div className="mx-auto max-w-5xl px-4 md:px-6">
-        <SectionHeading>About Us</SectionHeading>
         <div className="mt-4 space-y-4">
           <p className="text-white/80 leading-relaxed font-medium text-justify text-md">
             Robofiesta 2025 returns with more energy, innovation, and excitement

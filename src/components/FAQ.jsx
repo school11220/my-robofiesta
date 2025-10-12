@@ -72,8 +72,8 @@ export default function FAQ() {
   }
   return (
     <section id="faq" className="section py-16 md:py-20">
+      <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div className="mx-auto max-w-4xl px-4 md:px-6">
-        <SectionHeading>Frequently Asked Questions</SectionHeading>
         <div className="terminal-container mt-12">
           <div className="terminal-body p-4 md:p-6">
             {/* Renders the predefined FAQ list */}
