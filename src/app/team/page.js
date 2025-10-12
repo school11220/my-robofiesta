@@ -72,25 +72,22 @@ export default function TeamPage() {
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionHeading>Our Team</SectionHeading>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {eventCoordinators.map((coordinator, index) => (
-              <div
-                key={index}
-                className="group relative text-center p-3 glass border border-[var(--neon)]/20 hover:border-[var(--neon)]/60 transition-all duration-300 hover:scale-105 cursor-default"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-[var(--neon)]/0 group-hover:bg-[var(--neon)]/5 blur-sm transition-all duration-300"></div>
-                
-                <h3 className="relative font-orbitron text-sm font-semibold text-white/80 group-hover:text-[var(--neon)] transition-colors duration-300">
-                  {coordinator.name}
-                </h3>
-                
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[var(--neon)]/0 group-hover:border-[var(--neon)] transition-all duration-300"></div>
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[var(--neon)]/0 group-hover:border-[var(--neon)] transition-all duration-300"></div>
+          <div className="mt-8">
+            <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {eventCoordinators.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"
+                  >
+                    <span className="text-[var(--neon)] opacity-60 group-hover:opacity-100 transition-opacity">▸</span>
+                    <span className="font-medium text-sm md:text-base font-orbitron">
+                      {coordinator.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </GlassCard>
           </div>
         </div>
       </section>

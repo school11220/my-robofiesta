@@ -41,15 +41,24 @@ export default function Schedule() {
               
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {eventsByDate[date].map((event, index) => {
+                  const isSoldOut = event.soldOut || !event.checkoutLink;
+                  
                   const cardContent = (
-                    <GlassCard key={`${event.eventName}-${index}`} className="p-4 cursor-pointer">
+                    <GlassCard key={`${event.eventName}-${index}`} className={`p-4 relative ${!isSoldOut && 'cursor-pointer'}`}>
+                      {/* Sold Out Badge */}
+                      {isSoldOut && (
+                        <div className="absolute top-2 right-2 glass px-2 py-1 border border-red-500/60">
+                          <span className="font-orbitron text-xs font-bold text-red-500">SOLD OUT</span>
+                        </div>
+                      )}
+                      
                       <div className="flex flex-col space-y-2">
                         <h4 className="font-orbitron text-lg font-semibold text-white text-center">
                           {event.eventName}
                         </h4>
                         
                         {event.time && (
-                          <div className="flex items-center justify-center gap-2 text-[var(--neon)] text-sm font-medium">
+                          <div className={`flex items-center justify-center gap-2 text-sm font-medium ${isSoldOut ? 'text-white/40' : 'text-[var(--neon)]'}`}>
                             <svg 
                               className="w-4 h-4" 
                               fill="none" 

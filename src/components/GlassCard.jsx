@@ -1,15 +1,9 @@
 export default function GlassCard({ className = "", children, href, ...props }) {
-  // Base classes including the new transition and hover effects
+  // Base classes
   const baseClasses = `
     glass
     p-4
     h-full
-    cursor-pointer
-    transition-all duration-300 ease-in-out
-    hover:scale-[1.03]
-    hover:shadow-2xl
-    hover:shadow-[var(--neon)]/20
-    hover:border-[var(--neon)]/30
     ${className}
   `;
 
