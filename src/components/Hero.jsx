@@ -50,7 +50,7 @@ export default function Hero() {
                 </div>
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Dates</div>
-                  <div className="font-semibold">1 November</div>
+                  <div className="font-semibold">22-23 November</div>
                 </div>
                 <div className="glass py-3">
                   <div className="text-xs text-white/60">Prize Pool</div>

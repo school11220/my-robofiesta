@@ -75,10 +75,16 @@ export default function Navbar() {
     <header className="relative z-[999]">
       <div className="mx-auto max-w-full px-4 md:px-8">
         {/* --- Desktop View --- */}
-        <div className="hidden md:flex sticky top-4 mt-4 glass items-center justify-between px-6 py-2" ref={searchContainerRef}>
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/img/logo.avif" alt="RoboFiesta Logo" width={240} height={56} className="h-auto" priority />
-          </Link>
+        <div className="hidden md:flex sticky top-4 mt-4 glass items-center justify-between px-6 py-3" ref={searchContainerRef}>
+          <div className="flex items-center gap-4">
+            <Link href="/" >
+              <Image src="/img/logo.avif" alt="RoboFiesta Logo" width={280} height={65} className="h-15 w-auto" priority />
+            </Link>
+            <span className="text-white text-2xl font-light mx-1">×</span>
+            <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Sponsor" width={160} height={32} className="h-8 w-auto" />
+            <span className="text-white/70 text-2xl font-thin mx-1">|</span>
+            <Image src="/img/sec.png" alt="Sponsor" width={160} height={32} className="h-12 w-auto" />
+          </div>
           
           {/* ✅ Search bar has been removed from the desktop view */}
           <nav className="flex items-center gap-3">
@@ -93,10 +99,14 @@ export default function Navbar() {
 
         {/* --- MOBILE VIEW --- */}
         <div className="md:hidden mt-4 space-y-2" ref={searchContainerRef}>
-          <div className="glass flex justify-center px-6 py-2">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/img/logo.avif" alt="RoboFiesta Logo" width={200} height={46} className="h-auto" priority />
-            </Link>
+          <div className="glass flex justify-center items-center gap-3 px-3 py-3">
+            
+              <Image src="/img/logo.avif" alt="RoboFiesta Logo" width={110} height={22} className="h-6 w-auto" priority />
+            
+            <span className="text-white text-lg font-light"> × </span>
+            <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Sponsor" width={110} height={22} className="h-6 w-auto" />
+            <span className="text-white/70 text-lg font-thin"> | </span>
+            <Image src="/img/sec.png" alt="Sponsor" width={110} height={22} className="h-12 w-auto" />
           </div>
           <div className="glass sticky top-4 flex flex-col items-center gap-2 px-4 py-2">
             {/* <div className="relative w-full max-w-xs mb-1">

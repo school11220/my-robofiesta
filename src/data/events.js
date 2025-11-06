@@ -15,11 +15,12 @@ export const events =[
     "time": "10:00 am – 11:00 am",
     "venue": "LAB 1",
     "image": "/img/logo design.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/logo-design",
-    "category": "Pre-Events"
+    "checkoutLink": null,
+    "category": "Pre-Events",
+    "soldOut": true
   },
   {
-    "eventName": "HACK-A-DAY",
+    "eventName": "Hack-A-Day",
     "date": "22-23 November 2025",
     "time": "7:00 pm – 9:00 am",
     "venue": "Bengaluru",
@@ -39,10 +40,10 @@ export const events =[
   {
     "eventName": "Clash Royale",
     "date": "25 November 2025",
-    "time": "TBA",
-    "venue": "TBA",
+    "time": "11:30 am - 2:00 pm",
+    "venue": "First Floor Seminar Hall",
     "image": "/img/clashroyale.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/clash-royale",
+    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSfX1r2aJFYrunp64FH4JwqFlZz5PFtJ3_JjPLZ_Cy9n51t-mw/viewform",
     "category": "E-Games"
   },
   {
@@ -172,7 +173,7 @@ export const events =[
     "category": "Main Events"
   },
   {
-    "eventName": "CODE BATTLE",
+    "eventName": "Code Battle",
     "date": "25 November 2025",
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 1",
@@ -196,6 +197,15 @@ export const events =[
     "venue": "Lab 1",
     "image": "/img/hardware.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/hardware-project-expo",
+    "category": "Main Events"
+  },
+  {
+    "eventName": "Chess Colosseum",
+    "date": "26 November 2025",
+    "time": "11:00 am – 2:00 pm",
+    "venue": "Labs",
+    "image": "/img/Chess.png",
+    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSerL-wCZ8m7BUnOuSihQs-LOhroS6L1CQhdRvrcL77TB5fJTg/viewform",
     "category": "Main Events"
   }
 ]

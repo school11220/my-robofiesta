@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import GlassCard from "@/components/GlassCard";
-import { teamMembers, eventCoordinators } from "@/data/team";
+import { teamMembers, eventCoordinators, onGroundCoordinators } from "@/data/team";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -69,13 +69,106 @@ export default function TeamPage() {
       </section>
 
       {/* Event Coordinators Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-10">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <SectionHeading>Our Team</SectionHeading>
-          <div className="mt-8">
+          <SectionHeading>Event Co-ordinators</SectionHeading>
+          <div className="mt-4">
             <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
                 {eventCoordinators.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"
+                  >
+                    <span className="text-[var(--neon)] opacity-60 group-hover:opacity-100 transition-opacity">▸</span>
+                    <span className="font-medium text-sm md:text-base font-orbitron">
+                      {coordinator.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+      {/* Website Section */}
+      <section className="py-4 md:py-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionHeading>Website</SectionHeading>
+          <div className="mt-4">
+            <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {onGroundCoordinators.website.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"
+                  >
+                    <span className="text-[var(--neon)] opacity-60 group-hover:opacity-100 transition-opacity">▸</span>
+                    <span className="font-medium text-sm md:text-base font-orbitron">
+                      {coordinator.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+      <section className="py-4 md:py-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionHeading>DOP</SectionHeading>
+          <div className="mt-4">
+            <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {onGroundCoordinators.dop.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"
+                  >
+                    <span className="text-[var(--neon)] opacity-60 group-hover:opacity-100 transition-opacity">▸</span>
+                    <span className="font-medium text-sm md:text-base font-orbitron">
+                      {coordinator.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Hospitality Section */}
+      <section className="py-4 md:py-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionHeading>Hospitality</SectionHeading>
+          <div className="mt-4">
+            <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {onGroundCoordinators.hospitality.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"
+                  >
+                    <span className="text-[var(--neon)] opacity-60 group-hover:opacity-100 transition-opacity">▸</span>
+                    <span className="font-medium text-sm md:text-base font-orbitron">
+                      {coordinator.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics Section */}
+      <section className="py-4 md:py-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <SectionHeading>Logistics</SectionHeading>
+          <div className="mt-4">
+            <GlassCard className="p-8 md:p-12 border-2 border-[var(--neon)]/20">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {onGroundCoordinators.logistics.map((coordinator, index) => (
                   <div
                     key={index}
                     className="group flex items-center gap-2 text-white/70 hover:text-[var(--neon)] transition-colors duration-300"

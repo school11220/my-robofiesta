@@ -5,7 +5,7 @@ export const faqData = [
   },
   {
     question: "Who is eligible to participate in the hackathon?",
-    answer: "Students, professionals, and hobbyists of all skill levels."
+    answer: "Students of all skill levels can participate, from beginners to experienced developers. We encourage diversity and welcome participants from various academic backgrounds."
   },
   {
     question: "What is the team size limit?",

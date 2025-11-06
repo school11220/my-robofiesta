@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
 import TypewriterEffect from "@/components/TypewriterEffect";
 
 // InteractiveTitle component (no changes needed)
@@ -110,11 +111,18 @@ export default function WelcomeScreen({ onEnter }) {
             </p>
           </div>
 
-          <div className="mb-12">
-            <p className="text-lg md:text-xl text-white/80 mb-2 font-light animate-fadeIn">
-              Welcome to the Ultimate Tech Event
+          {/* Sponsor Logos Section */}
+          <div className="mb-8 flex flex-col items-center gap-4">
+            <p className="text-sm md:text-base text-neon/60 font-orbitron tracking-wide uppercase">
+              Powered by
             </p>
+            <div className="flex items-center gap-4">
+              <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Raja Skoda" width={140} height={28} className="h-8 md:h-10 w-auto" />
+              <span className="text-white/40 text-2xl font-thin">|</span>
+              <Image src="/img/sec.png" alt="BMCW" width={140} height={28} className="h-10 md:h-12 w-auto" />
+            </div>
           </div>
+          <br />
 
           <button
             onClick={handleEnter}
