@@ -100,10 +100,10 @@ export default function WelcomeScreen({ onEnter }) {
           }`}
         >
           <div className="mb-8" style={{ perspective: "1000px" }}>
-            <InteractiveTitle text="RoboFiesta" style={holographicStyle} />
+            <InteractiveTitle text="Robofiesta" style={holographicStyle} />
             <br />
             <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-bold text-white transition-all duration-200 ease-out" style={holographicStyle}>
-              <TypewriterEffect texts={yearTexts} speed={100} delayBetweenTexts={500} cursor={false} />
+              <TypewriterEffect texts={yearTexts} speed={200} delayBetweenTexts={500} cursor={false} />
             </h1>
             <div className="cosmic-line mb-6 animate-expand"></div><br />
             <p className="text-xl md:text-3xl text-[var(--neon)] font-orbitron tracking-wider animate-glow">
@@ -119,7 +119,7 @@ export default function WelcomeScreen({ onEnter }) {
             <div className="flex items-center gap-4">
               <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Raja Skoda" width={140} height={28} className="h-8 md:h-10 w-auto" />
               <span className="text-white/40 text-2xl font-thin">|</span>
-              <Image src="/img/sec.png" alt="BMCW" width={140} height={28} className="h-10 md:h-12 w-auto" />
+              <Image src="/img/sec.png" alt="BMCW" width={150} height={25} className="h-18 md:h-20 w-auto" />
             </div>
           </div>
           <br />

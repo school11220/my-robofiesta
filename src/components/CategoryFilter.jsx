@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function CategoryFilter({ onCategoryChange }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const categories = ['Pre-Events', 'Main Events', 'E-Games'];
+  const categories = ['Stand-up Show', 'Pre-Events', 'Main Events', 'E-Games'];
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);

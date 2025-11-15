@@ -57,6 +57,17 @@ export default function EventCard({ event }) {
               <span className="font-orbitron text-xs font-bold text-red-500">SOLD OUT</span>
             </div>
           )}
+          {/* Early Bird Badge for Stand-up Show */}
+          {event.eventName === "Stand-up Show" && !isSoldOut && (
+            <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
+              <div className="bg-gradient-to-r from-red-600 to-red-500 px-2 py-1 rounded-md shadow-lg animate-bounce">
+                <span className="font-orbitron text-[10px] font-black text-white uppercase tracking-wider">🔥 Limited</span>
+              </div>
+              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 px-2 py-1 rounded-md shadow-lg">
+                <span className="font-orbitron text-[10px] font-black text-white uppercase tracking-wider">Early Bird</span>
+              </div>
+            </div>
+          )}
           <Image
             src={imagePath}
             alt={event.eventName}
@@ -87,6 +98,26 @@ export default function EventCard({ event }) {
             {event.time && (
               <div className="text-xs text-[var(--neon)] mt-1">
                 {event.time}
+              </div>
+            )}
+            {event.price && (
+              <div className="mt-2">
+                {event.eventName === "Stand-up Show" ? (
+                  <div className="relative inline-block">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-lg font-black text-yellow-400" style={{filter:'drop-shadow(0 0 8px rgba(250, 204, 21, 0.7))'}}>
+                        {event.price}
+                      </span>
+                    </div>
+                    <div className="text-[9px] text-yellow-300 font-orbitron uppercase tracking-wider font-bold mt-0.5">
+                      🔥 Early Bird Special
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-sm font-bold text-yellow-400">
+                    {event.price}
+                  </div>
+                )}
               </div>
             )}
           </div>

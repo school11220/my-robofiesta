@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ComedyShowFeature from "@/components/ComedyShowFeature";
+import FloatingComedyWidget from "@/components/FloatingComedyWidget";
 import About from "@/components/About";
 import Events from "@/components/Events";
 import Schedule from "@/components/Schedule";
@@ -12,6 +14,9 @@ import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <div className="min-h-screen text-white relative">
+      {/* Floating Corner Widget */}
+      <FloatingComedyWidget />
+      
       {/* Animated starfield background */}
       <div className="absolute inset-0 w-full h-full">
         <div className="stars"></div>
@@ -21,6 +26,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <ComedyShowFeature />
         <About/>
         <Schedule />
         {/* <Events /> */}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import GlassCard from "@/components/GlassCard";
+import FloatingComedyWidget from "@/components/FloatingComedyWidget";
 import { teamMembers, eventCoordinators, onGroundCoordinators } from "@/data/team";
 
 import Navbar from "@/components/Navbar";
@@ -18,6 +19,7 @@ export default function TeamPage() {
   return (
     <>
       <Navbar />
+      <FloatingComedyWidget />
       <main className="min-h-screen">
         <div className="stars"></div>
         <div className="twinkling"></div>

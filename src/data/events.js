@@ -1,5 +1,15 @@
 export const events =[
   {
+    "eventName": "Stand-up Show",
+    "date": "25 November 2025",
+    "time": "5:30 pm – 7:00 pm",
+    "venue": "RVITM",
+    "image": "/img/comedy.png",
+    "checkoutLink": "https://standup.robofiesta.in/event-details/stand-up-show",
+    "category": "Stand-up Show",
+    "price": "₹200"
+  },
+  {
     "eventName": "Squid Game",
     "date": "13 October 2025",
     "time": "9:00 am – 12:00 pm",
@@ -191,12 +201,12 @@ export const events =[
     "category": "Main Events"
   },
   {
-    "eventName": "Hardware Project Expo",
+    "eventName": "Project Expo",
     "date": "25 November 2025",
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
     "image": "/img/hardware.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/hardware-project-expo",
+    "checkoutLink": "https://register.robofiesta.in/event-details/project-expo",
     "category": "Main Events"
   },
   {

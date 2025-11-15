@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EventCard from '@/components/EventCard';
 import CategoryFilter from '@/components/CategoryFilter';
+import FloatingComedyWidget from '@/components/FloatingComedyWidget';
 import { events } from '@/data/events';
 
 function EventsPageContent() {
@@ -65,6 +66,9 @@ function EventsPageContent() {
 
   return (
     <div className="min-h-screen text-white relative">
+      {/* Floating Corner Widget */}
+      <FloatingComedyWidget />
+      
       {/* ✅ Background updated to match the Team Page */}
       <div className="absolute inset-0 -z-10">
         <div className="stars"></div>
