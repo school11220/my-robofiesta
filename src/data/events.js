@@ -35,8 +35,9 @@ export const events =[
     "time": "7:00 pm – 9:00 am",
     "venue": "Bengaluru",
     "image": "/img/had.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/hack-a-day",
-    "category": "Pre-Events"
+    "checkoutLink": null,
+    "category": "Pre-Events",
+    "soldOut": true
   },
   {
     "eventName": "BGMI",

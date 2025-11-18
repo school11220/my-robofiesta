@@ -38,7 +38,11 @@ export default function Hero() {
 
           {/* Right Card */}
           <div className="w-full flex-1">
-            <div className="glass p-6 text-center md:p-10">
+            <div className="glass p-6 text-center md:p-10 relative">
+              {/* SOLD OUT Badge */}
+              <div className="absolute top-4 right-4 glass px-3 py-1.5 border-2 border-red-500/60 z-10">
+                <span className="font-orbitron text-xs font-bold text-red-500">SOLD OUT</span>
+              </div>
               <p className="mt-4 text-lg text-white/80 md:text-xl">Featured Hackathon</p>
               <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl">
                 Hack-A-Day
@@ -58,17 +62,9 @@ export default function Hero() {
                 </div>
               </div>
               <div className="mt-8">
-                <StarBorder
-                  as="a"
-                  href="https://register.robofiesta.in/event-details/hack-a-day"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-lg font-bold"
-                  color="var(--neon)"
-                  speed="1.5s"
-                >
-                  REGISTER NOW
-                </StarBorder>
+                <div className="glass px-6 py-3 border border-red-500/30 inline-block">
+                  <span className="font-orbitron text-lg font-bold text-red-500">SOLD OUT</span>
+                </div>
               </div>
             </div>
           </div>
