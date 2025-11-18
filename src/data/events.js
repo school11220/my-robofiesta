@@ -212,11 +212,11 @@ export const events =[
   },
   {
     "eventName": "Chess Colosseum",
-    "date": "26 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 2:00 pm",
     "venue": "Labs",
     "image": "/img/Chess.png",
     "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSerL-wCZ8m7BUnOuSihQs-LOhroS6L1CQhdRvrcL77TB5fJTg/viewform",
-    "category": "Main Events"
+    "category": "E-Games"
   }
 ]
