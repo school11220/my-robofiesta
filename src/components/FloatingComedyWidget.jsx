@@ -24,7 +24,7 @@ export default function FloatingComedyWidget() {
           onClick={handleReopen}
           className="fixed bottom-10 right-10 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-cyan-600 to-cyan-400 hover:from-cyan-700 hover:to-cyan-500 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(0,255,240,0.6)] border-2 border-[var(--neon)]/30 group"
         >
-          <span className="text-3xl group-hover:scale-110 transition-transform">😂</span>
+          <span className="text-3xl group-hover:scale-110 transition-transform">🎭</span>
         </button>
       )}
       {isVisible && (
