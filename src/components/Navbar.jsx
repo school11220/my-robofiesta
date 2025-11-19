@@ -117,11 +117,11 @@ export default function Navbar() {
           <div className="glass flex justify-center items-center gap-3 px-3 py-5">
             <Image src="/img/logo.avif" alt="RoboFiesta Logo" width={110} height={22} className="h-10 w-auto" priority />
 
-            {/* Small badge logo for mobile (visible on md and below) */}
+            {/* Small badge logo for mobile (visible on md and below)
             <div className="flex items-center gap-2">
               <Image src="/img/logo.png" alt="RF Badge" width={36} height={36} className="h-8 w-8 rounded-md object-contain" />
               <span className="text-white text-sm font-medium">RoboFiesta</span>
-            </div>
+            </div> */}
 
             <span className="text-white text-lg font-light"> × </span>
             <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Sponsor" width={110} height={22} className="h-6 w-auto" />
