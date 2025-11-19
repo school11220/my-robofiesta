@@ -28,22 +28,77 @@ export default function Hero() {
               RoboFiesta 2025 — A Tech event celebrating AI, Robotics, and Tech.
             </p>
             <p className="mt-2 text-white/70">
-              Oct 13, 2025 | Bengaluru, India
+              Oct 25 & 26, 2025 | Bengaluru, India
             </p>
-            <p className="mt-4 text-lg text-white/80 md:text-xl">
-              Our Main Event Starts in
-            </p>
-            <Countdown targetDate={EVENT_DATE_ISO} />
+            
+            {/* Our Sponsors Section */}
+            <div className="mt-6 md:mt-6">
+              <h3 className="font-orbitron text-center text-lg md:text-xl font-bold text-white mb-8">
+                Our Sponsors
+              </h3>
+
+              <div className="glass p-4 md:p-6 rounded-xl border border-[var(--neon)]/30">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
+
+                  {/* Sponsor 1 */}
+                  <div className="flex items-center justify-center w-full md:w-auto">
+                    <Image 
+                      src="/img/RAJA SKODA.pdf (200 x 40 px).png" 
+                      alt="Raja Skoda - Title Sponsor" 
+                      width={160} 
+                      height={32} 
+                      className="h-13 md:h-10 w-auto object-contain"
+                    />
+                  </div>
+
+                  {/* Mobile small dash */}
+                  <span className="block md:hidden text-white/100 text-lg">-</span>
+
+                  {/* Desktop divider */}
+                  <span className="hidden md:block text-white/100 text-xl">|</span>
+
+                  {/* Sponsor 2 */}
+                  <div className="flex items-center justify-center w-full md:w-auto">
+                    <Image 
+                      src="/img/sec.png" 
+                      alt="Sponsor" 
+                      width={160} 
+                      height={32} 
+                      className="h-19 md:h-17 w-auto object-contain"
+                    />
+                  </div>
+
+                  {/* Mobile small dash */}
+                  <span className="block md:hidden text-white/100 text-lg">-</span>
+
+                  {/* Desktop divider */}
+                  <span className="hidden md:block text-white/100 text-xl">|</span>
+
+                  {/* Sponsor 3 */}
+                  <div className="flex items-center justify-center w-full md:w-auto">
+                    <Image 
+                      src="/img/new.png" 
+                      alt="Sponsor" 
+                      width={200} 
+                      height={25} 
+                      className="h-15 md:h-16 w-65 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+          
 
           {/* Right Card */}
           <div className="w-full flex-1">
             <div className="glass p-6 text-center md:p-10 relative">
               {/* Early Bird Badge */}
-              <div className="absolute top-4 right-4 flex flex-col gap-1 z-10">
-                <div className="font-bold bg-gradient-to-r from-black-1000 to-black-500 px-2 py-2 rounded-md shadow-lg animate-pulse">
-                  <span className="font-bold font-orbitron text-[20px] font-black text-white uppercase">
-                    <span className="shake">📢</span> Limited
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col gap-1 z-10">
+                <div className="font-bold bg-gradient-to-r from-black-1000 to-black-500 px-3 py-1 rounded-md shadow-lg animate-pulse text-center">
+                  <span className="font-bold font-orbitron text-[20px] font-black text-red uppercase tracking-wider">
+                    <span className="shake">📢</span> Limited 
                   </span>
                 </div>
 
@@ -59,13 +114,13 @@ export default function Hero() {
 
                   .shake {
                     display: inline-block;
-                    animation: shake 0.4s infinite;
+                    animation: shake 1.5s infinite;
                   }
                 `}</style>
               </div>
 
-              
-              <p className="mt-4 text-lg text-white/80 md:text-xl">Featured Event</p>
+
+            <br />
               <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl flex items-center justify-center gap-2">
                 Stand-up Show
               </div>
@@ -99,7 +154,7 @@ export default function Hero() {
 
                     .shakeY {
                       display: inline-block;
-                      animation: shakeY 0.6s infinite ease-in-out;
+                      animation: shakeY 1s infinite ease-in-out;
                     }
                   `}</style>
                 </div>
