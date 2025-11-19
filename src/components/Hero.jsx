@@ -38,7 +38,7 @@ export default function Hero() {
               </h3>
 
               <div className="glass p-4 md:p-6 rounded-xl border border-[var(--neon)]/30">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-1">
 
                   {/* Sponsor 1 */}
                   <div className="flex items-center justify-center w-full md:w-auto">

@@ -116,13 +116,34 @@ export default function WelcomeScreen({ onEnter }) {
             <p className="text-sm md:text-base text-neon/60 font-orbitron tracking-wide uppercase">
               Powered by
             </p>
-            <div className="flex items-center gap-4">
-              <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Raja Skoda" width={140} height={28} className="h-8 md:h-10 w-auto" />
-              <span className="text-white/100 text-2xl font-thin">X</span>
-              <Image src="/img/sec.png" alt="BMCW" width={150} height={25} className="h-18 md:h-20 w-auto" />
+
+            <div className="flex flex-col items-center gap-1 md:flex-row md:gap-6 justify-center">
+              <Image
+                src="/img/RAJA SKODA.pdf (200 x 40 px).png"
+                alt="Raja Skoda"
+                width={140}
+                height={28}
+                className="h-10 md:h-10 w-auto"
+              />
+              <span className="text-white/100 text-1xl font-thin">_</span>
+              <Image
+                src="/img/sec.png"
+                alt="BMCW"
+                width={150}
+                height={25}
+                className="h-18 md:h-20 w-auto"
+              />
+              <span className="text-white/100 text-1xl font-thin">_</span>
+              <Image
+                src="/img/new.png"
+                alt="BMCW"
+                width={150}
+                height={25}
+                className="h-18 md:h-20 w-auto"
+              />
             </div>
           </div>
-          <br />
+
 
           <button
             onClick={handleEnter}
