@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import ComedyShowFeature from "@/components/ComedyShowFeature";
+// import ComedyShowFeature from "@/components/ComedyShowFeature";
 import FloatingComedyWidget from "@/components/FloatingComedyWidget";
 import About from "@/components/About";
 import Events from "@/components/Events";
@@ -26,7 +26,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <ComedyShowFeature />
+        {/* <ComedyShowFeature /> */}
         <About/>
         <Schedule />
         {/* <Events /> */}

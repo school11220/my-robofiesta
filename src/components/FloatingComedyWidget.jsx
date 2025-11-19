@@ -120,7 +120,7 @@ export default function FloatingComedyWidget() {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-[8px] text-yellow-300 font-orbitron uppercase tracking-wider font-bold">🔥 Early Bird</div>
+                      <div className="text-[8px] text-yellow-300 font-orbitron uppercase tracking-wider font-bold">⏳ Early Bird</div>
                       <div className="flex items-baseline gap-1">
                         <div className="text-lg font-black text-yellow-400" style={{ filter: "drop-shadow(0 0 8px rgba(250, 204, 21, 0.7))" }}>₹200</div>
                       </div>

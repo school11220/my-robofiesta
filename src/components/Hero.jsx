@@ -39,32 +39,92 @@ export default function Hero() {
           {/* Right Card */}
           <div className="w-full flex-1">
             <div className="glass p-6 text-center md:p-10 relative">
-              {/* MAXED OUT Badge */}
-              <div className="absolute top-4 right-4 glass px-3 py-1.5 border-2 border-red-500/60 z-10">
-                <span className="font-orbitron text-xs font-bold text-red-500">MAXED OUT</span>
+              {/* Early Bird Badge */}
+              <div className="absolute top-4 right-4 flex flex-col gap-1 z-10">
+                <div className="font-bold bg-gradient-to-r from-black-1000 to-black-500 px-2 py-2 rounded-md shadow-lg animate-pulse">
+                  <span className="font-bold font-orbitron text-[20px] font-black text-white uppercase">
+                    <span className="shake">📢</span> Limited
+                  </span>
+                </div>
+
+                <style jsx>{`
+                  @keyframes shake {
+                    0% { transform: rotate(0deg); }
+                    20% { transform: rotate(-10deg); }
+                    40% { transform: rotate(10deg); }
+                    60% { transform: rotate(-10deg); }
+                    80% { transform: rotate(10deg); }
+                    100% { transform: rotate(0deg); }
+                  }
+
+                  .shake {
+                    display: inline-block;
+                    animation: shake 0.4s infinite;
+                  }
+                `}</style>
               </div>
-              <p className="mt-4 text-lg text-white/80 md:text-xl">Featured Hackathon</p>
-              <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl">
-                Hack-A-Day
+
+              
+              <p className="mt-4 text-lg text-white/80 md:text-xl">Featured Event</p>
+              <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl flex items-center justify-center gap-2">
+                Stand-up Show
               </div>
+              
               <div className="mt-6 grid grid-cols-3 gap-3">
                 <div className="glass py-3">
-                  <div className="text-xs text-white/60">Location</div>
-                  <div className="font-semibold">RVITM</div>
+                  <div className="text-xs text-white/60">Date</div>
+                  <div className="font-semibold">25 Nov</div>
                 </div>
                 <div className="glass py-3">
-                  <div className="text-xs text-white/60">Dates</div>
-                  <div className="font-semibold">22-23 November</div>
+                  <div className="text-xs text-white/60">Time</div>
+                  <div className="font-semibold">5:30-7 PM</div>
                 </div>
-                <div className="glass py-3">
-                  <div className="text-xs text-white/60">Prize Pool</div>
-                  <div className="font-semibold">₹30,000</div>
+                <div className="relative glass p-3 border-2 border-yellow-400/60 text-center rounded-md bg-gradient-to-br from-yellow-500/10 to-orange-500/10 shadow-[0_0_20px_rgba(250,204,21,0.3)] animate-pulse">
+                  <div className="text-xs text-yellow-300 font-bold tracking-wider mb-0.5 animate-pulse">
+                    <span className="shakeY">⏳</span> Early Bird
+                  </div>
+
+                  <div className="font-black text-lg text-yellow-400" style={{ filter: 'drop-shadow(0 0 8px rgba(250, 204, 21, 0.7))' }}>
+                    <span className="text-lg">₹200</span>
+                  </div>
+
+                  <style jsx>{`
+                    @keyframes shakeY {
+                      0% { transform: translateY(0); }
+                      25% { transform: translateY(-2px); }
+                      50% { transform: translateY(2px); }
+                      75% { transform: translateY(-2px); }
+                      100% { transform: translateY(0); }
+                    }
+
+                    .shakeY {
+                      display: inline-block;
+                      animation: shakeY 0.6s infinite ease-in-out;
+                    }
+                  `}</style>
                 </div>
+
               </div>
-              <div className="mt-8">
-                <div className="glass px-6 py-3 border border-red-500/30 inline-block">
-                  <span className="font-orbitron text-lg font-bold text-red-500">MAXED OUT</span>
+              <br />
+              <div className="mb-4 p-2 bg-gradient-to-r from-red-600/20 via-orange-500/20 to-red-600/20 border border-red-500/40 rounded-lg text-center">
+                  <p className="text-xs md:text-sm font-bold text-red-300 animate-pulse">
+                    ⚡ Limited seats available at Early Bird price! Don't miss out!
+                  </p>
                 </div>
+              <div className="mt-8">
+                <StarBorder
+                  as="a"
+                  href="https://standup.robofiesta.in/event-details/stand-up-show"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-base md:text-lg font-bold"
+                  color="var(--neon)"
+                  speed="1.5s"
+                >
+                  <span className="flex flex-col items-center">
+                    <span>BUY TICKETS!!!</span>
+                  </span>
+                </StarBorder>
               </div>
             </div>
           </div>
