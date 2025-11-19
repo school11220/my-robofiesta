@@ -41,18 +41,35 @@ export default function About() {
         <SectionHeading>About Our Sponsors</SectionHeading>
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="mt-8 glass p-6 md:p-10 border border-[var(--neon)]/30 rounded-xl">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
-              <Image 
-                src="/img/RAJA SKODA.pdf (200 x 40 px).png" 
-                alt="Raja Skoda Logo" 
-                width={200} 
-                height={40} 
-                className="h-12 md:h-16 w-auto object-contain"
-              />
+            <div className="flex flex-col items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-4">
+                  <Image 
+                    src="/img/RAJA SKODA.pdf (200 x 40 px).png" 
+                    alt="Raja Skoda Logo" 
+                    width={200} 
+                    height={40} 
+                    className="h-12 md:h-16 w-auto object-contain"
+                  />
+                  
+                  <span className="text-white/100 text-2xl font-thin pb-1">x</span>
+                  
+                  <Image 
+                    src="/img/sec.png" 
+                    alt="BMCW Logo" 
+                    width={200} 
+                    height={40} 
+                    className="h-12 md:h-16 w-auto object-contain"
+                  />
+              </div>
+              <br />
+
+              {/* Title Text: Now sits on its own line because of the parent 'flex-col' */}
               <h3 className="neon-subtitle font-orbitron text-2xl md:text-3xl font-bold text-center">
-                Raja Skoda – Title Sponsor
+                Raja Skoda–Title Sponsor
               </h3>
+
             </div>
+            <br />
             
             <div className="space-y-4 text-white/80 leading-relaxed text-justify">
               <p className="text-md font-medium">

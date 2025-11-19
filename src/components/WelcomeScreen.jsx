@@ -118,7 +118,7 @@ export default function WelcomeScreen({ onEnter }) {
             </p>
             <div className="flex items-center gap-4">
               <Image src="/img/RAJA SKODA.pdf (200 x 40 px).png" alt="Raja Skoda" width={140} height={28} className="h-8 md:h-10 w-auto" />
-              <span className="text-white/40 text-2xl font-thin">|</span>
+              <span className="text-white/100 text-2xl font-thin">X</span>
               <Image src="/img/sec.png" alt="BMCW" width={150} height={25} className="h-18 md:h-20 w-auto" />
             </div>
           </div>
