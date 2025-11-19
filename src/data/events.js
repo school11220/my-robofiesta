@@ -45,7 +45,7 @@ export const events =[
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/bgmi",
+    "checkoutLink": "https://forms.gle/zxA8eTp47rs45zWQA",
     "category": "E-Games"
   },
   {
@@ -108,7 +108,7 @@ export const events =[
     "time": "10:00 am – 4:00 pm",
     "venue": "Auditorium",
     "image": "/img/ipl.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/ipl-auction",
+    "checkoutLink": "https://forms.gle/Ki1uA4x9FNgjTGvy6",
     "category": "Main Events"
   },
   {
