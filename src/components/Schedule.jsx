@@ -59,9 +59,12 @@ export default function Schedule() {
                       {/* Sold Out Badge */}
                       {isSoldOut && (
                         <div className="absolute top-2 right-2 glass px-2 py-0.5 border border-red-500/60">
-                          <span className="font-orbitron text-[10px] font-bold text-red-500">SOLD OUT</span>
+                          <span className="font-orbitron text-[10px] font-bold text-red-500">
+                            {event.eventName === "Hack-A-Day" ? 'MAXED OUT' : 'SOLD OUT'}
+                          </span>
                         </div>
                       )}
+                      
                       
                       <div className="flex flex-col space-y-2">
                         <h4 className="font-orbitron text-base md:text-lg font-semibold text-white text-center pr-8">

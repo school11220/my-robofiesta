@@ -54,7 +54,7 @@ export default function EventCard({ event }) {
           {/* Sold Out Badge */}
           {isSoldOut && (
             <div className="absolute top-3 right-3 z-10 glass px-3 py-1 border-2 border-red-500/60">
-              <span className="font-orbitron text-xs font-bold text-red-500">SOLD OUT</span>
+              <span className="font-orbitron text-xs font-bold text-red-500">{event.eventName === "Hack-A-Day" ? 'MAXED OUT' : 'SOLD OUT'}</span>
             </div>
           )}
           {/* Early Bird Badge for Stand-up Show */}
@@ -125,7 +125,7 @@ export default function EventCard({ event }) {
           <div className="mt-4">
             {isSoldOut ? (
               <div className="glass px-4 py-2 text-center border border-red-500/30">
-                <span className="font-orbitron text-xs font-semibold text-red-500">SOLD OUT</span>
+                <span className="font-orbitron text-xs font-semibold text-red-500">{event.eventName === "Hack-A-Day" ? 'MAXED OUT' : 'SOLD OUT'}</span>
               </div>
             ) : (
               <StarBorder
