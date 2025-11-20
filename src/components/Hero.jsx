@@ -39,6 +39,28 @@ export default function Hero() {
 
               <div className="glass p-3 md:p-5 rounded-xl border border-[var(--neon)]/30 overflow-hidden">
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                  {/* Raja Skoda */}
+                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
+                    <Image
+                      src="/img/RAJA SKODA.pdf (200 x 40 px).png"
+                      alt="Raja Skoda"
+                      width={200}
+                      height={40}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
+                  {/* BMCW / sec */}
+                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
+                    <Image
+                      src="/img/sec.png"
+                      alt="Sponsor"
+                      width={160}
+                      height={36}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
 
                   {/* Networkers Home */}
                   <div className="flex-shrink-0 w-40 sm:w-48 md:w-56 flex items-center justify-center px-2">
@@ -51,31 +73,12 @@ export default function Hero() {
                     />
                   </div>
 
-                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
+                  
 
-                  {/* Raja Skoda */}
-                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
-                    <Image
-                      src="/img/RAJA SKODA.pdf (200 x 40 px).png"
-                      alt="Raja Skoda"
-                      width={200}
-                      height={40}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
+                  
 
-                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
 
-                  {/* BMCW / sec */}
-                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
-                    <Image
-                      src="/img/sec.png"
-                      alt="Sponsor"
-                      width={160}
-                      height={36}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
+                  
 
                 </div>
               </div>

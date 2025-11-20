@@ -57,7 +57,7 @@ export default function About() {
                   height={40} 
                   className="h-10 md:h-12 w-auto object-contain"
                 />
-                <span className="sm:block text-white/100 text-2xl">|</span>
+                <span className="hidden sm:block text-white/100 text-2xl">|</span>
                 <Image 
                   src="/img/sec.png" 
                   alt="Raja Skoda Logo" 
