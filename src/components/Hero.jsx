@@ -31,98 +31,65 @@ export default function Hero() {
               Oct 25 & 26, 2025 | Bengaluru, India
             </p>
             
-            {/* Our Sponsors Section */}
-            <div className="mt-6 md:mt-6">
-              <h3 className="font-orbitron text-center text-lg md:text-xl font-bold text-white mb-8">
+            {/* Our Sponsors Section (responsive) */}
+            <div className="mt-6 md:mt-8">
+              <h3 className="font-orbitron text-center text-base md:text-lg font-bold text-white/90 mb-4">
                 Our Sponsors
               </h3>
 
-              <div className="glass p-4 md:p-6 rounded-xl border border-[var(--neon)]/30">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-1">
+              <div className="glass p-3 md:p-5 rounded-xl border border-[var(--neon)]/30 overflow-hidden">
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
 
-                  {/* Sponsor 1 */}
-                  <div className="flex items-center justify-center w-full md:w-auto">
-                    <Image 
-                      src="/img/RAJA SKODA.pdf (200 x 40 px).png" 
-                      alt="Raja Skoda - Title Sponsor" 
-                      width={160} 
-                      height={32} 
-                      className="h-13 md:h-10 w-auto object-contain"
+                  {/* Networkers Home */}
+                  <div className="flex-shrink-0 w-40 sm:w-48 md:w-56 flex items-center justify-center px-2">
+                    <Image
+                      src="/img/new.png"
+                      alt="Networkers Home"
+                      width={220}
+                      height={44}
+                      className="w-full h-auto object-contain"
                     />
                   </div>
 
-                  {/* Mobile small dash */}
-                  <span className="block md:hidden text-white/100 text-lg">-</span>
+                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
 
-                  {/* Desktop divider */}
-                  <span className="hidden md:block text-white/100 text-xl">|</span>
-
-                  {/* Sponsor 2 */}
-                  <div className="flex items-center justify-center w-full md:w-auto">
-                    <Image 
-                      src="/img/sec.png" 
-                      alt="Sponsor" 
-                      width={160} 
-                      height={32} 
-                      className="h-19 md:h-17 w-auto object-contain"
+                  {/* Raja Skoda */}
+                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
+                    <Image
+                      src="/img/RAJA SKODA.pdf (200 x 40 px).png"
+                      alt="Raja Skoda"
+                      width={200}
+                      height={40}
+                      className="w-full h-auto object-contain"
                     />
                   </div>
 
-                  {/* Mobile small dash */}
-                  <span className="block md:hidden text-white/100 text-lg">-</span>
+                  <span className="hidden sm:block text-white/40 text-2xl">×</span>
 
-                  {/* Desktop divider */}
-                  <span className="hidden md:block text-white/100 text-xl">|</span>
-
-                  {/* Sponsor 3 */}
-                  <div className="flex items-center justify-center w-full md:w-auto">
-                    <Image 
-                      src="/img/new.png" 
-                      alt="Sponsor" 
-                      width={200} 
-                      height={25} 
-                      className="h-15 md:h-16 w-65 object-contain"
+                  {/* BMCW / sec */}
+                  <div className="flex-shrink-0 w-32 sm:w-40 md:w-48 flex items-center justify-center px-2">
+                    <Image
+                      src="/img/sec.png"
+                      alt="Sponsor"
+                      width={160}
+                      height={36}
+                      className="w-full h-auto object-contain"
                     />
                   </div>
+
                 </div>
               </div>
             </div>
-
           </div>
           
 
           {/* Right Card */}
           <div className="w-full flex-1">
             <div className="glass p-6 text-center md:p-10 relative">
-              {/* Early Bird Badge */}
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col gap-1 z-10">
-                <div className="font-bold bg-gradient-to-r from-black-1000 to-black-500 px-3 py-1 rounded-md shadow-lg animate-pulse text-center">
-                  <span className="font-bold font-orbitron text-[20px] font-black text-red uppercase tracking-wider">
-                    <span className="shake">📢</span> Limited 
-                  </span>
-                </div>
-
-                <style jsx>{`
-                  @keyframes shake {
-                    0% { transform: rotate(0deg); }
-                    20% { transform: rotate(-10deg); }
-                    40% { transform: rotate(10deg); }
-                    60% { transform: rotate(-10deg); }
-                    80% { transform: rotate(10deg); }
-                    100% { transform: rotate(0deg); }
-                  }
-
-                  .shake {
-                    display: inline-block;
-                    animation: shake 1.5s infinite;
-                  }
-                `}</style>
-              </div>
 
 
-            <br />
               <div className="neon-subtitle mt-2 font-orbitron text-3xl font-extrabold md:text-5xl flex items-center justify-center gap-2">
-                Stand-up Show
+                Stand-up Show + DJ Night
               </div>
               
               <div className="mt-6 grid grid-cols-3 gap-3">
@@ -160,10 +127,18 @@ export default function Hero() {
                 </div>
 
               </div>
+
+              {/* Countdown to Stand-up Show */}
+              <div className="mt-3 flex flex-col items-center justify-center">
+                <div className="text-sm text-white/100 mb-1 uppercase tracking-wider">Starts in</div>
+                <div className="w-full max-w-xl">
+                  <Countdown targetDate="2025-11-25T17:30:00" />
+                </div>
+              </div>
               <br />
               <div className="mb-4 p-2 bg-gradient-to-r from-red-600/20 via-orange-500/20 to-red-600/20 border border-red-500/40 rounded-lg text-center">
                   <p className="text-xs md:text-sm font-bold text-red-300 animate-pulse">
-                    ⚡ Limited seats available at Early Bird price! Don't miss out!
+                    ⚡ Get free DJ concert tickets and free Monster drink. Don't miss out!
                   </p>
                 </div>
               <div className="mt-8">
