@@ -126,9 +126,8 @@ export const events =[
     "time": "2:00 pm – 4:00 pm",
     "venue": null,
     "image": "/img/treasurehunt.png",
-    "checkoutLink": null,
+    "checkoutLink": "https://register.robofiesta.in/event-details/treasure-hunt",
     "category": "Main Events",
-    "soldOut": true
   },
   {
     "eventName": "Sell Me This Pen",
