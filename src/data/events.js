@@ -90,7 +90,7 @@ export const events =[
     "time": "9:00 am – 5:00 pm",
     "venue": "Lab 3",
     "image": "/img/valo.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/valorant",
+    "checkoutLink": "https://forms.gle/TzctvkTSVkMJrVhW7",
     "category": "E-Games"
   },
   {
@@ -126,8 +126,9 @@ export const events =[
     "time": "2:00 pm – 4:00 pm",
     "venue": null,
     "image": "/img/treasurehunt.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/treasure-hunt",
+    "checkoutLink": null,
     "category": "Main Events",
+    "soldOut": true
   },
   {
     "eventName": "Sell Me This Pen",
@@ -171,7 +172,7 @@ export const events =[
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
     "image": "/img/byw.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/build-your-web",
+    "checkoutLink": "https://forms.gle/bbgyN8Ezog6KtD9g9",
     "category": "Main Events"
   },
   {
@@ -180,7 +181,7 @@ export const events =[
     "time": "9:30 am – 12:30 pm",
     "venue": "GROUND FLOOR LOBBY",
     "image": "/img/roborace.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/robo-race",
+    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSdTvpMVuC7m9y8IZE2o6QDAnAVy3z8UMKW_w3sswFxXFbbBvg/viewform",
     "category": "Main Events"
   },
   {
@@ -207,7 +208,7 @@ export const events =[
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
     "image": "/img/hardware.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/project-expo",
+    "checkoutLink": "https://forms.gle/RVsnaPTto6yUM6SC6",
     "category": "Main Events"
   },
   {

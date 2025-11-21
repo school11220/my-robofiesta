@@ -99,6 +99,9 @@ export default function About() {
                   As part of the Raja Group, we're showcasing our latest 2-wheelers and 4-wheelers — a reflection of our commitment to performance, design, and progress.
                   Join us on 25th & 26th November at the event grounds to explore how Raja Skoda brings technology and imagination together, redefining the way you move.
                 </p>
+                <p className="text-large md:text-md font-medium">
+                  <a href="https://www.rajaskoda.in/" target="blank">Visit Raja Skoda</a>
+                </p>
               </div>
             </div>
              {/* Divider */}
