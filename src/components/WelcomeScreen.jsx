@@ -93,7 +93,6 @@ export default function WelcomeScreen({ onEnter }) {
           <div className="twinkling"></div>
           <div className="clouds"></div>
         </div>
-        
         <div
           className={`relative z-10 text-center max-w-4xl px-6 transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -110,20 +109,18 @@ export default function WelcomeScreen({ onEnter }) {
               Technoverse: Beyond Boundaries
             </p>
           </div>
-
           {/* Sponsor Logos Section */}
           <div className="mb-8 flex flex-col items-center gap-4">
             <p className="text-sm md:text-base text-neon/60 font-orbitron tracking-wide uppercase">
               Powered by
             </p>
-
             <div className="flex flex-col items-center gap-1 md:flex-row md:gap-6 justify-center">
               <Image
                 src="/img/RAJA SKODA.pdf (200 x 40 px).png"
                 alt="Raja Skoda"
                 width={140}
                 height={28}
-                className="h-10 md:h-10 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
               <span className="text-white/100 text-1xl font-thin">_</span>
               <Image
@@ -131,7 +128,7 @@ export default function WelcomeScreen({ onEnter }) {
                 alt="BMCW"
                 width={150}
                 height={25}
-                className="h-18 md:h-20 w-auto"
+                className="h-18 md:h-24 w-auto"
               />
               <span className="text-white/100 text-1xl font-thin">_</span>
               <Image
@@ -139,12 +136,10 @@ export default function WelcomeScreen({ onEnter }) {
                 alt="BMCW"
                 width={150}
                 height={25}
-                className="h-18 md:h-20 w-auto"
+                className="h-16 md:h-15 w-auto"
               />
             </div>
           </div>
-
-
           <button
             onClick={handleEnter}
             className={`enter-button group px-12 py-4 font-orbitron text-lg font-bold tracking-wider transition-all duration-300
@@ -158,7 +153,6 @@ export default function WelcomeScreen({ onEnter }) {
             </span>
           </button>
         </div>
-        
         <div
           className="corner-decoration corner-top-left animate-rotate-slow"
           style={{ transform: `translate(${mousePosition.x * 15}px, ${mousePosition.y * 15}px)` }}

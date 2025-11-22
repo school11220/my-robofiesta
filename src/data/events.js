@@ -45,8 +45,9 @@ export const events =[
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
-    "checkoutLink": "https://forms.gle/zxA8eTp47rs45zWQA",
-    "category": "E-Games"
+    "checkoutLink": null,
+    "category": "E-Games",
+    "soldOut": true
   },
   {
     "eventName": "Clash Royale",
@@ -72,8 +73,9 @@ export const events =[
     "time": "2:00 pm – 5:00 pm",
     "venue": "MCA Sem Hall",
     "image": "/img/freefire.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/free-fire",
-    "category": "E-Games"
+    "checkoutLink": null,
+    "category": "E-Games",
+    "soldOut": true
   },
   {
     "eventName": "Save The Egg",
@@ -81,8 +83,9 @@ export const events =[
     "time": "11:00 am – 3:00 pm",
     "venue": "Drawing Room",
     "image": "/img/save-the-egg.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/save-the-egg",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut": true
   },
   {
     "eventName": "Valorant",
@@ -217,7 +220,8 @@ export const events =[
     "time": "11:00 am – 2:00 pm",
     "venue": "Labs",
     "image": "/img/Chess.png",
-    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSerL-wCZ8m7BUnOuSihQs-LOhroS6L1CQhdRvrcL77TB5fJTg/viewform",
-    "category": "E-Games"
+    "checkoutLink": null,
+    "category": "E-Games",    
+    "soldOut": true
   }
 ]
