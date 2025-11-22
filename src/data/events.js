@@ -45,9 +45,8 @@ export const events =[
     "time": "11:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
-    "checkoutLink": null,
+    "checkoutLink": "https://forms.gle/d8LZrK9BKvaKHGXD9",
     "category": "E-Games",
-    "soldOut": true
   },
   {
     "eventName": "Clash Royale",
