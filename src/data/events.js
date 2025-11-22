@@ -55,8 +55,9 @@ export const events =[
     "time": "11:30 am - 2:00 pm",
     "venue": "First Floor Seminar Hall",
     "image": "/img/clashroyale.png",
-    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSfX1r2aJFYrunp64FH4JwqFlZz5PFtJ3_JjPLZ_Cy9n51t-mw/viewform",
-    "category": "E-Games"
+    "checkoutLink": null,
+    "category": "E-Games",
+    "soldOut": true
   },
   {
     "eventName": "FIFA",
