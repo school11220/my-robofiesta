@@ -168,8 +168,9 @@ export const events =[
     "time": "1:00 pm – 3:00 pm",
     "venue": "Lab 3",
     "image": "/img/bugsquash.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/bug-squash",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut": true
   },
   {
     "eventName": "Build Your Web",
@@ -195,7 +196,8 @@ export const events =[
     "time": "3:00 pm – 5:00 pm",
     "venue": "Lab 1",
     "image": "/img/codebattle.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/code-battle",
+    "checkoutLink": null,
+    "soldOut": true,
     "category": "Main Events"
   },
   {
