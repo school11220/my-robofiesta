@@ -94,7 +94,7 @@ export const events =[
     "time": "9:00 am – 5:00 pm",
     "venue": "Lab 3",
     "image": "/img/valo.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/valorant",
+    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSdU1w40GWoMI-AHy6c25Z4IpPCdzgzF31vrSTku-IqhUyII8g/viewform",
     "category": "E-Games"
   },
   {
@@ -113,7 +113,7 @@ export const events =[
     "time": "10:00 am – 4:00 pm",
     "venue": "Auditorium",
     "image": "/img/ipl.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/ipl-auction",
+    "checkoutLink": "https://forms.gle/WvBtFYqeLki4fN988",
     "category": "Main Events"
   },
   {
@@ -178,7 +178,7 @@ export const events =[
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
     "image": "/img/byw.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/build-your-web",
+    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSe6SgZrPYF4l2sSfrie6QYcKEA8DoujbV442JWAbZIr3oo9DQ/viewform",
     "category": "Main Events"
   },
   {
@@ -187,7 +187,7 @@ export const events =[
     "time": "9:30 am – 12:30 pm",
     "venue": "GROUND FLOOR LOBBY",
     "image": "/img/roborace.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/robo-race",
+    "checkoutLink": "https://forms.gle/SqzNKhHrbuLvcds97",
     "category": "Main Events"
   },
   {
