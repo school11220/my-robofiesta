@@ -45,8 +45,9 @@ export const events =[
     "time": "9:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
-    "checkoutLink": "https://forms.gle/d8LZrK9BKvaKHGXD9",
+    "checkoutLink": null,
     "category": "E-Games",
+    "soldOut": true
   },
   {
     "eventName": "Clash Royale",
@@ -102,8 +103,9 @@ export const events =[
     "time": "11:00 am – 1:00 pm",
     "venue": "Lab 3",
     "image": "/img/ctf.png",
-    "checkoutLink": "https://register.robofiesta.in/event-details/capture-the-flag",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut": true
   },
   {
     "eventName": "IPL Auction",
@@ -199,7 +201,7 @@ export const events =[
   {
     "eventName": "Circuitrix",
     "date": "25 November 2025",
-    "time": "11:00 pm – 3:00 pm",
+    "time": "11:00 pm – 1:00 pm",
     "venue": "Lab 2",
     "image": "/img/circuitrix.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/circuitrix",
@@ -211,8 +213,9 @@ export const events =[
     "time": "11:00 am – 2:00 pm",
     "venue": "Lab 1",
     "image": "/img/hardware.png",
-    "checkoutLink": "https://forms.gle/RVsnaPTto6yUM6SC6",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut": true
   },
   {
     "eventName": "Chess Colosseum",
