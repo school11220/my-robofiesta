@@ -42,7 +42,7 @@ export const events =[
   {
     "eventName": "BGMI",
     "date": "25 November 2025",
-    "time": "11:00 am – 4:00 pm",
+    "time": "9:00 am – 4:00 pm",
     "venue": "MCA Seminar Hall",
     "image": "/img/bgmi.png",
     "checkoutLink": "https://forms.gle/d8LZrK9BKvaKHGXD9",
@@ -51,7 +51,7 @@ export const events =[
   {
     "eventName": "Clash Royale",
     "date": "25 November 2025",
-    "time": "11:30 am - 2:00 pm",
+    "time": "9:00 am - 1:00 pm",
     "venue": "First Floor Seminar Hall",
     "image": "/img/clashroyale.png",
     "checkoutLink": null,
@@ -61,7 +61,7 @@ export const events =[
   {
     "eventName": "FIFA",
     "date": "26 November 2025",
-    "time": "11:00 am – 1:00 pm",
+    "time": "12:00 am – 3:00 pm",
     "venue": "MCA Sem Hall",
     "image": "/img/fifa.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/fifa",
@@ -70,7 +70,7 @@ export const events =[
   {
     "eventName": "Free Fire",
     "date": "26 November 2025",
-    "time": "2:00 pm – 5:00 pm",
+    "time": "10:00 pm – 3:00 pm",
     "venue": "MCA Sem Hall",
     "image": "/img/freefire.png",
     "checkoutLink": null,
@@ -108,7 +108,7 @@ export const events =[
   {
     "eventName": "IPL Auction",
     "date": "26 November 2025",
-    "time": "10:00 am – 4:00 pm",
+    "time": "9:00 am – 4:00 pm",
     "venue": "Auditorium",
     "image": "/img/ipl.png",
     "checkoutLink": "https://forms.gle/Ki1uA4x9FNgjTGvy6",
@@ -126,7 +126,7 @@ export const events =[
   {
     "eventName": "Treasure Hunt",
     "date": "26 November 2025",
-    "time": "2:00 pm – 4:00 pm",
+    "time": "11:00 pm – 2:00 pm",
     "venue": null,
     "image": "/img/treasurehunt.png",
     "checkoutLink": null,
@@ -136,7 +136,7 @@ export const events =[
   {
     "eventName": "Sell Me This Pen",
     "date": "26 November 2025",
-    "time": "12:00 pm – 2:00 pm",
+    "time": "9:00 pm – 11:00 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "/img/sellmethispen.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/sell-me-this-pen",
@@ -145,7 +145,7 @@ export const events =[
   {
     "eventName": "Great Tech Quest",
     "date": "26 November 2025",
-    "time": "2:00 pm – 4:00 pm",
+    "time": "1:00 pm – 3:00 pm",
     "venue": "1ST FLOOR SEM HALL",
     "image": "/img/great tech quest.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/great-tech-quest",
@@ -154,7 +154,7 @@ export const events =[
   {
     "eventName": "Pitch In The Box",
     "date": "26 November 2025",
-    "time": "2:00 pm – 4:00 pm",
+    "time": "11:00 pm – 12:30 pm",
     "venue": "6TH FLOOR SEM HALL",
     "image": "/img/pitch in the box.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/pitch-in-the-box",
@@ -199,7 +199,7 @@ export const events =[
   {
     "eventName": "Circuitrix",
     "date": "25 November 2025",
-    "time": "3:00 pm – 5:00 pm",
+    "time": "11:00 pm – 3:00 pm",
     "venue": "Lab 2",
     "image": "/img/circuitrix.png",
     "checkoutLink": "https://register.robofiesta.in/event-details/circuitrix",
