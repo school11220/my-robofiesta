@@ -144,7 +144,7 @@ export default function Hero() {
               <div className="mt-8">
                 <StarBorder
                   as="a"
-                  href="https://standup.robofiesta.in/event-details/stand-up-show"
+                  href="https://forms.gle/uDUewcommKdzK7A89"
                   target="_blank"
                   rel="noreferrer"
                   className="text-base md:text-lg font-bold"

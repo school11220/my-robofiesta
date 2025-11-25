@@ -113,8 +113,9 @@ export const events =[
     "time": "9:00 am",
     "venue": "Auditorium",
     "image": "/img/ipl.png",
-    "checkoutLink": "https://forms.gle/WvBtFYqeLki4fN988",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut":true
   },
   {
     "eventName": "Anime Quiz",
@@ -178,8 +179,9 @@ export const events =[
     "time": "9:00 am – 3:00 pm",
     "venue": "Lab 1",
     "image": "/img/byw.png",
-    "checkoutLink": "https://docs.google.com/forms/d/e/1FAIpQLSe6SgZrPYF4l2sSfrie6QYcKEA8DoujbV442JWAbZIr3oo9DQ/viewform",
-    "category": "Main Events"
+    "checkoutLink": null,
+    "category": "Main Events",
+    "soldOut":true
   },
   {
     "eventName": "Robo Race",
