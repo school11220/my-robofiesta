@@ -5,9 +5,9 @@ export const events =[
     "time": "5:30 pm – 7:00 pm",
     "venue": "RVITM",
     "image": "/img/comedy.png",
-    "checkoutLink": "https://standup.robofiesta.in/event-details/stand-up-show",
+    "checkoutLink": "https://forms.gle/t8kbokPuEUeHtY7C6",
     "category": "Stand-up Show",
-    "price": "₹200"
+    "price": "₹234"
   },
   {
     "eventName": "Squid Game",

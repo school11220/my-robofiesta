@@ -105,12 +105,9 @@ export default function Hero() {
                   <div className="font-semibold">5:30-7 PM</div>
                 </div>
                 <div className="relative glass p-3 border-2 border-yellow-400/60 text-center rounded-md bg-gradient-to-br from-yellow-500/10 to-orange-500/10 shadow-[0_0_20px_rgba(250,204,21,0.3)] animate-pulse">
-                  <div className="text-xs text-yellow-300 font-bold tracking-wider mb-0.5 animate-pulse">
-                    <span className="shakeY">⏳</span> Early Bird
-                  </div>
 
                   <div className="font-black text-lg text-yellow-400" style={{ filter: 'drop-shadow(0 0 8px rgba(250, 204, 21, 0.7))' }}>
-                    <span className="text-lg">₹200</span>
+                    <span className="text-lg">₹234</span>
                   </div>
 
                   <style jsx>{`
