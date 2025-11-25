@@ -58,7 +58,7 @@ export default function EventCard({ event }) {
             </div>
           )}
           {/* Early Bird Badge for Stand-up Show */}
-          {event.eventName === "Stand-up Show" && !isSoldOut && (
+          {/* {event.eventName === "Stand-up Show" && !isSoldOut && (
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
               <div className="bg-gradient-to-r from-red-600 to-red-500 px-2 py-1 rounded-md shadow-lg animate-bounce">
                 <span className="font-orbitron text-[10px] font-black text-white uppercase tracking-wider">🔥 Limited</span>
@@ -67,7 +67,7 @@ export default function EventCard({ event }) {
                 <span className="font-orbitron text-[10px] font-black text-white uppercase tracking-wider">Early Bird</span>
               </div>
             </div>
-          )}
+          )} */}
           <Image
             src={imagePath}
             alt={event.eventName}
@@ -100,7 +100,7 @@ export default function EventCard({ event }) {
                 {event.time}
               </div>
             )}
-            {event.price && (
+            {/* {event.price && (
               <div className="mt-2">
                 {event.eventName === "Stand-up Show" ? (
                   <div className="relative inline-block">
@@ -119,7 +119,7 @@ export default function EventCard({ event }) {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
           </div>
           
           <div className="mt-4">
