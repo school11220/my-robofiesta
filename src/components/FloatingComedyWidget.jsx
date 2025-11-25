@@ -126,7 +126,7 @@ export default function FloatingComedyWidget() {
 
                 {/* CTA BUTTON */}
                 <a
-  href="https://standup.robofiesta.in/event-details/stand-up-show"
+  href="https://forms.gle/uDUewcommKdzK7A89"
   target="_blank"
   rel="noreferrer"
   className="block w-full mt-3 group"
