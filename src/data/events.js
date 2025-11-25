@@ -221,7 +221,7 @@ export const events =[
   },
   {
     "eventName": "Chess Colosseum",
-    "date": "26 November 2025",
+    "date": "25 November 2025",
     "time": "11:00 am – 2:00 pm",
     "venue": "Labs",
     "image": "/img/Chess.png",
