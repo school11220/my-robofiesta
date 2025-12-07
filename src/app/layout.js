@@ -24,9 +24,12 @@ const oxanium = Oxanium({
 });
 
 export const metadata = {
-  title: "RoboFiesta 2025 - Technoverse: Beyond Boundaries",
+  title: "Thank You - RoboFiesta 2025",
   description:
-    "Experience the ultimate tech hackathon where innovation meets the cosmos.",
+    "Thank you for making RoboFiesta 2025 an unforgettable journey through the technoverse!",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
